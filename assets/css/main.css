@@ -761,6 +761,7 @@ section,
   height: 100%;
   object-fit: cover;
   z-index: 1;
+  border-radius: 20px;
 }
 
 .features .features-item h4 {
@@ -785,6 +786,26 @@ section,
 /*--------------------------------------------------------------
 # Clients Section
 --------------------------------------------------------------*/
+
+.clients .features-item h4 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 5px 0;
+}
+
+.clients .features-item i {
+  font-size: 48px;
+  color: var(--accent-color);
+  margin-right: 20px;
+  line-height: 0;
+}
+
+.clients .features-item p {
+  font-size: 15px;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  margin: 0;
+}
+
 .clients .clients-wrap {
   border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
   border-left: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
