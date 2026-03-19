@@ -145,6 +145,10 @@ h6 {
   .header .navmenu {
     order: 3;
   }
+
+  .header .navmenu-list a {
+    justify-content: center;
+  }
 }
 
 /* Global Header on Scroll
