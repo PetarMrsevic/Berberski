@@ -31,7 +31,7 @@
 
    <!-- Site Alert -->
   <div id="topAlert" class="alert alert-warning text-center m-0 rounded-0" role="alert">
-    Sajt je i dalje u fazi izrade, dodatne informacije će biti dostupne uskoro. Hvala na razumevanju! &#10084;
+    Sajt je i dalje u fazi izrade, dodatne informacije će biti dostupne uskoro!
   </div>
 
   <header id="header" class="header d-flex align-items-center fixed-top">
@@ -44,8 +44,8 @@
 
       <nav id="navmenu" class="navmenu">
         <ul class="navmenu-list">
-          <li><a href="#hero" class="active">Početna</a></li>
           <li><a href="#about">O nama</a></li>
+          <li><a href="#pricing">Upoznajte nas</a></li>
           <li><a href="#services">Usluge</a></li>
           <li><a href="#gallery">Galerija</a></li>
           <li><a href="#features">Saradnje</a></li>
@@ -78,6 +78,12 @@
         alertBox.classList.remove("show");
         header.classList.remove("move");
       }, 5200);
+
+      alertBox.addEventListener("transitionend", (e) => {
+      if (!alertBox.classList.contains("show")) {
+        alertBox.style.display = "none";
+        }
+      });
 
     });
   </script>
@@ -772,7 +778,7 @@
               <div class="d-flex justify-content-center align-items-center">
                 <span data-purecounter-start="0" data-purecounter-end="7" data-purecounter-duration="1" class="purecounter"></span><span>+</span>
               </div>
-              <p style="color: white;" data-aos="fade-up" data-aos-delay="200">Godina sa vama.</p>
+              <p style="color: white;" data-aos="fade-up" data-aos-delay="200">Godina sa vama. &#10084;</p>
             </div>
           </div><!-- End Stats Item -->
 
