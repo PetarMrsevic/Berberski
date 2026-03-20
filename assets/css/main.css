@@ -1149,6 +1149,59 @@ section,
   color: var(--accent-color);
 }
 
+/* Swiper */
+
+.swiper-pagination-bullet {
+  background: var(--nav-dropdown-color);
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--accent-color);
+  opacity: 1;
+}
+
+.swiper-button-prev, .swiper-button-next {
+  color: var(--accent-color);
+  opacity: 1;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+/* Alert */
+#topAlert {
+  position: fixed;
+  top: -60px;       /* sakriveno iznad prozora */
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  z-index: 1050;    /* iznad navbar-a */
+  transition: top 0.5s ease;
+}
+
+#topAlert.show {
+  top: 0;
+}
+
+#header.fixed-top {
+  transition: top 0.5s ease;
+}
+
+#header.fixed-top.move {
+  top: 60px;       /* pomeri navbar dok alert klizi */
+}
+
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/

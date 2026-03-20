@@ -29,6 +29,11 @@
 
 <body class="index-page">
 
+   <!-- Site Alert -->
+  <div id="topAlert" class="alert alert-warning text-center m-0 rounded-0" role="alert">
+    Sajt je i dalje u fazi izrade, dodatne informacije će biti dostupne uskoro. Hvala na razumevanju! &#10084;
+  </div>
+
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container position-relative d-flex align-items-center justify-content-between">
 
@@ -42,6 +47,7 @@
           <li><a href="#hero" class="active">Početna</a></li>
           <li><a href="#about">O nama</a></li>
           <li><a href="#services">Usluge</a></li>
+          <li><a href="#gallery">Galerija</a></li>
           <li><a href="#features">Saradnje</a></li>
           <li><a href="#clients">Promocije</a></li>
           <li><a href="#practices">Obuke</a></li>
@@ -54,6 +60,28 @@
 
     </div>
   </header>
+
+  <script>
+    window.addEventListener("load", function () {
+
+      const alertBox = document.getElementById("topAlert");
+      const header = document.getElementById("header");
+
+      // Pojavi alert i pomeri navbar
+      setTimeout(() => {
+        alertBox.classList.add("show");
+        header.classList.add("move");
+      }, 200);
+
+      // Nestane posle 5 sekundi i vrati navbar nazad
+      setTimeout(() => {
+        alertBox.classList.remove("show");
+        header.classList.remove("move");
+      }, 5200);
+
+    });
+  </script>
+
 
   <main class="main">
 
@@ -134,7 +162,7 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="pricing-item">
               <p class="recommended-badge">Manikirka</p>
-              <h3>Ana Bytsko</h3>
+              <h3>Ana Bysko</h3>
               <img src="/assets/img/tim/ana.jpeg" alt="" style="width: 100%; max-height: 350px; object-fit: cover;">
               <div class="social-links d-flex justify-content-between px-4 mt-5 mb-3">
                     <a data-bs-toggle="tooltip" title="+381 061 56 99 177" href="tel:+381615699177"><i class="bi bi-telephone-fill"></i></a>
@@ -248,6 +276,293 @@
 
     </section><!-- /Services Section -->
 
+    <section id="gallery" class="section"><!-- Gallery Section -->
+
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Galerija</h2>
+        <p>Pogledajte naše radove!</p>
+      </div>
+
+      <div class="container">
+
+        <div class="container">
+          <div class="row g-3 justify-content-center">
+
+            <!-- SWIPER 1 -->
+            <div class="col-lg-4 col-md-6 d-none d-lg-block" data-aos="fade-up" data-aos-delay="100">
+              <p class="text-center">Manja Berberski</p>
+              <div class="swiper init-swiper gallerySwiper">
+                <script type="application/json" class="swiper-config">
+                {
+                  "loop": true,
+                  "speed": 600,
+                  "slidesPerView": 1,
+                  "spaceBetween": 20,
+                  "pagination": {
+                    "el": ".swiper-pagination",
+                    "clickable": true
+                  },
+                  "navigation": {
+                  "nextEl": ".swiper-button-next",
+                  "prevEl": ".swiper-button-prev"
+                  }
+                }
+                </script>
+
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="assets/img/examples/manjinklijent1.png" class="img-fluid rounded"></div>
+                  <div class="swiper-slide"><img src="assets/img/examples/manjinklijent2.png" class="img-fluid rounded"></div>
+                  <div class="swiper-slide"><img src="assets/img/examples/manjinklijent3.png" class="img-fluid rounded"></div>
+                  <div class="swiper-slide"><img src="assets/img/examples/manjinklijent4.png" class="img-fluid rounded"></div>
+                  <div class="swiper-slide"><img src="assets/img/examples/manjinklijent5.png" class="img-fluid rounded"></div>
+                  <div class="swiper-slide"><img src="assets/img/examples/manjinklijent6.png" class="img-fluid rounded"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+            </div>
+
+            <!-- SWIPER 2 -->
+            <div class="col-lg-4 col-md-6 d-none d-lg-block" data-aos="fade-up" data-aos-delay="200">
+              <p class="text-center">Ana Bysko</p>
+              <div class="swiper init-swiper gallerySwiper">
+                <script type="application/json" class="swiper-config">
+                {
+                  "loop": true,
+                  "speed": 600,
+                  "slidesPerView": 1,
+                  "spaceBetween": 20,
+                  "pagination": {
+                    "el": ".swiper-pagination",
+                    "clickable": true
+                  },
+                  "navigation": {
+                  "nextEl": ".swiper-button-next",
+                  "prevEl": ".swiper-button-prev"
+                  }
+                }
+                </script>
+
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="assets/img/examples/aninklijent1.png" class="img-fluid rounded"></div>
+                  <div class="swiper-slide"><img src="assets/img/examples/aninklijent2.png" class="img-fluid rounded"></div>
+                  <div class="swiper-slide"><img src="assets/img/examples/aninklijent3.png" class="img-fluid rounded"></div>
+                  <div class="swiper-slide"><img src="assets/img/examples/aninklijent4.png" class="img-fluid rounded"></div>
+                  <div class="swiper-slide"><img src="assets/img/examples/aninklijent5.png" class="img-fluid rounded"></div>
+                  <div class="swiper-slide"><img src="assets/img/examples/aninklijent6.png" class="img-fluid rounded"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+            </div>
+
+            <!-- SWIPER 3 -->
+            <div class="col-lg-4 col-md-6 d-none d-lg-block" data-aos="fade-up" data-aos-delay="300">
+              <p class="text-center">Jelena Dojčin</p>
+              <div class="swiper init-swiper gallerySwiper">
+                <script type="application/json" class="swiper-config">
+                {
+                  "loop": true,
+                  "speed": 600,
+                  "slidesPerView": 1,
+                  "spaceBetween": 20,
+                  "pagination": {
+                    "el": ".swiper-pagination",
+                    "clickable": true
+                  },
+                  "navigation": {
+                  "nextEl": ".swiper-button-next",
+                  "prevEl": ".swiper-button-prev"
+                  }
+                }
+                </script>
+
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="assets/img/examples/jeleninklijent1.png" class="img-fluid rounded"></div>
+                  <div class="swiper-slide"><img src="assets/img/examples/jeleninklijent2.png" class="img-fluid rounded"></div>
+                  <div class="swiper-slide"><img src="assets/img/examples/jeleninklijent3.png" class="img-fluid rounded"></div>
+                  <div class="swiper-slide"><img src="assets/img/examples/jeleninklijent4.png" class="img-fluid rounded"></div>
+                  <div class="swiper-slide"><img src="assets/img/examples/jeleninklijent5.png" class="img-fluid rounded"></div>
+                  <div class="swiper-slide"><img src="assets/img/examples/jeleninklijent6.png" class="img-fluid rounded"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+          <!-- MOBILE SWIPER -->
+        <div class="swiper init-swiper gallerySwiper d-lg-none pb-5" data-aos="fade-up" data-aos-delay="100">
+
+            <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "slidesPerView": 1,
+              "spaceBetween": 20,
+              "pagination": {
+                "el": ".swiper-pagination",
+                "clickable": true
+              },
+                  "navigation": {
+                  "nextEl": ".swiper-button-next",
+                  "prevEl": ".swiper-button-prev"
+              }
+            }
+            </script>
+
+            <div class="swiper-wrapper">
+
+              <div class="swiper-slide">
+                <img src="assets/img/examples/manjinklijent1.png" class="img-fluid rounded">
+              </div>
+
+              <div class="swiper-slide">
+                <img src="assets/img/examples/manjinklijent2.png" class="img-fluid rounded">
+              </div>
+
+              <div class="swiper-slide">
+                <img src="assets/img/examples/manjinklijent3.png" class="img-fluid rounded">
+              </div>
+
+              <div class="swiper-slide">
+                <img src="assets/img/examples/manjinklijent4.png" class="img-fluid rounded">
+              </div>
+
+              <div class="swiper-slide">
+                <img src="assets/img/examples/manjinklijent5.png" class="img-fluid rounded">
+              </div>
+
+              <div class="swiper-slide">
+                <img src="assets/img/examples/manjinklijent6.png" class="img-fluid rounded">
+              </div>
+
+            </div>
+
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+          </div>
+
+          <div class="swiper init-swiper gallerySwiper d-lg-none pb-5" data-aos="fade-up" data-aos-delay="200">
+
+            <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "slidesPerView": 1,
+              "spaceBetween": 20,
+              "pagination": {
+                "el": ".swiper-pagination",
+                "clickable": true
+              },
+                  "navigation": {
+                  "nextEl": ".swiper-button-next",
+                  "prevEl": ".swiper-button-prev"
+              }
+            }
+            </script>
+
+            <div class="swiper-wrapper">
+
+              <div class="swiper-slide">
+                <img src="assets/img/examples/aninklijent1.png" class="img-fluid rounded">
+              </div>
+
+              <div class="swiper-slide">
+                <img src="assets/img/examples/aninklijent2.png" class="img-fluid rounded">
+              </div>
+
+              <div class="swiper-slide">
+                <img src="assets/img/examples/aninklijent3.png" class="img-fluid rounded">
+              </div>
+
+              <div class="swiper-slide">
+                <img src="assets/img/examples/aninklijent4.png" class="img-fluid rounded">
+              </div>
+
+              <div class="swiper-slide">
+                <img src="assets/img/examples/aninklijent5.png" class="img-fluid rounded">
+              </div>
+
+              <div class="swiper-slide">
+                <img src="assets/img/examples/aninklijent6.png" class="img-fluid rounded">
+              </div>
+
+            </div>
+
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+          </div>
+
+          <div class="swiper init-swiper gallerySwiper d-lg-none pb-5" data-aos="fade-up" data-aos-delay="300">
+
+            <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "slidesPerView": 1,
+              "spaceBetween": 20,
+              "pagination": {
+                "el": ".swiper-pagination",
+                "clickable": true
+              },
+                  "navigation": {
+                  "nextEl": ".swiper-button-next",
+                  "prevEl": ".swiper-button-prev"
+              }
+            }
+            </script>
+
+            <div class="swiper-wrapper">
+
+              <div class="swiper-slide">
+                <img src="assets/img/examples/jeleninklijent1.png" class="img-fluid rounded">
+              </div>
+
+              <div class="swiper-slide">
+                <img src="assets/img/examples/jeleninklijent2.png" class="img-fluid rounded">
+              </div>
+
+              <div class="swiper-slide">
+                <img src="assets/img/examples/jeleninklijent3.png" class="img-fluid rounded">
+              </div>
+
+              <div class="swiper-slide">
+                <img src="assets/img/examples/jeleninklijent4.png" class="img-fluid rounded">
+              </div>
+
+              <div class="swiper-slide">
+                <img src="assets/img/examples/jeleninklijent5.png" class="img-fluid rounded">
+              </div>
+
+              <div class="swiper-slide">
+                <img src="assets/img/examples/jeleninklijent6.png" class="img-fluid rounded">
+              </div>
+
+            </div>
+
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- Gallery Section -->
+
     <!-- Features Section -->
     <section id="features" class="features section">
 
@@ -280,7 +595,7 @@
               </div>
             </div><!-- End Features Item-->
 
-            <div class="features-item d-flex mt-5 ps-0 ps-lg-3" data-aos="fade-up" data-aos-delay="500">
+            <div class="features-item d-flex mt-5 ps-0 ps-lg-3" data-aos="fade-up" data-aos-delay="400">
               <i class="bi bi-geo-alt-fill flex-shrink-0"></i>
               <div>
                 <h4>Lokacija saradnje.</h4>
@@ -288,7 +603,7 @@
               </div>
             </div><!-- End Features Item-->
 
-            <div class="features-item d-flex mt-5 ps-0 ps-lg-3" data-aos="fade-up" data-aos-delay="400">
+            <div class="features-item d-flex mt-5 ps-0 ps-lg-3" data-aos="fade-up" data-aos-delay="500">
               <i class="bi bi-filetype-pdf flex-shrink-0"></i>
               <div>
                 <h4>Zainteresovani ste za saradnju?</h4>
@@ -328,7 +643,7 @@
               </div>
             </div><!-- End Features Item-->
 
-            <div class="features-item d-flex ps-0 ps-lg-3 pt-4 pt-lg-0 mt-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="features-item d-flex ps-0 ps-lg-3 pt-4 pt-lg-0 mt-4" data-aos="fade-up" data-aos-delay="300">
               <i class="bi bi-question-lg flex-shrink-0"></i>
               <div>
                 <h4>Šta Vam garantujemo obukom?</h4>
@@ -336,7 +651,7 @@
               </div>
             </div><!-- End Features Item-->
 
-            <div class="features-item d-flex ps-0 ps-lg-3 pt-4 pt-lg-0 mt-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="features-item d-flex ps-0 ps-lg-3 pt-4 pt-lg-0 mt-4" data-aos="fade-up" data-aos-delay="400">
               <i class="bi bi-filetype-pdf flex-shrink-0"></i>
               <div>
                 <h4>Zainteresovani ste za obuku?</h4>
@@ -370,9 +685,9 @@
             </video>
           </div>
 
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             
-            <div class="features-item d-flex ps-0 ps-lg-3 pt-4 pt-lg-0" data-aos="fade-up" data-aos-delay="200">
+            <div class="features-item d-flex ps-0 ps-lg-3 pt-4 pt-lg-0" data-aos="fade-up" data-aos-delay="300">
               <i class="bi bi-camera-fill flex-shrink-0"></i>
               <div>
                 <h4>Od proizvodnje do prezentacije.</h4>
@@ -388,7 +703,7 @@
               </div>
             </div><!-- End Features Item-->
 
-            <div class="features-item d-flex ps-0 ps-lg-3 pt-4 pt-lg-0 mt-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="features-item d-flex ps-0 ps-lg-3 pt-4 pt-lg-0 mt-4" data-aos="fade-up" data-aos-delay="500">
               <i class="bi bi-filetype-pdf flex-shrink-0"></i>
               <div>
                 <h4>Želite da Vaš proizvod bude reklamiran?</h4>
@@ -398,9 +713,9 @@
 
           </div>
 
-          <p class="text-center">Neki od reklamiranih proizvođača:</p>
+          <p class="text-center" data-aos="fade-up" data-aos-delay="600">Neki od reklamiranih proizvođača:</p>
 
-        <div class="row g-0 clients-wrap">
+        <div class="row g-0 clients-wrap" data-aos="fade-up" data-aos-delay="700">
 
           <div class="col-xl-3 col-md-4 client-logo">
             <img src="assets/img/clients/client-1.jpg" class="img-fluid" alt="">
@@ -443,21 +758,21 @@
     <!-- Stats Section -->
     <section id="stats" class="stats section dark-background">
 
-      <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+      <div class="container position-relative">
 
-        <div class="subheading">
+        <div class="subheading" data-aos="fade-up">
           <h3>Brojevi govore.</h3>
           <p>Salon beleži rast iz godine u godinu, a statistika ispod nam upravo to i dokazuje.</p>
         </div>
 
-        <div class="row gy-4">
+        <div class="row gy-4" data-aos="fade-up" data-aos-delay="100">
 
           <div class="col">
             <div class="stats-item text-center w-100 h-100">
               <div class="d-flex justify-content-center align-items-center">
                 <span data-purecounter-start="0" data-purecounter-end="7" data-purecounter-duration="1" class="purecounter"></span><span>+</span>
               </div>
-              <p style="color: white;">Godina sa vama.</p>
+              <p style="color: white;" data-aos="fade-up" data-aos-delay="200">Godina sa vama.</p>
             </div>
           </div><!-- End Stats Item -->
 
@@ -466,7 +781,7 @@
               <div class="d-flex justify-content-center align-items-center">
                 <span data-purecounter-start="0" data-purecounter-end="500" data-purecounter-duration="1" class="purecounter"></span><span>+</span>
               </div>
-              <p style="color: white;">Zadovoljnih klijenata.</p>
+              <p style="color: white;" data-aos="fade-up" data-aos-delay="200">Zadovoljnih klijenata.</p>
             </div>
           </div><!-- End Stats Item -->
 
@@ -475,7 +790,7 @@
               <div class="d-flex justify-content-center align-items-center">
                 <span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1" class="purecounter"></span><span>+</span>
               </div>
-              <p style="color: white;">Izvedenih saradnji.</p>
+              <p style="color: white;" data-aos="fade-up" data-aos-delay="200">Izvedenih saradnji.</p>
             </div>
           </div><!-- End Stats Item -->
 
@@ -484,7 +799,7 @@
               <div class="d-flex justify-content-center align-items-center">
                 <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="1" class="purecounter"></span><span>+</span>
               </div>
-              <p style="color: white;">Uručenih sertifikata.</p>
+              <p style="color: white;" data-aos="fade-up" data-aos-delay="200">Uručenih sertifikata.</p>
             </div>
           </div><!-- End Stats Item -->
 
@@ -493,7 +808,7 @@
               <div class="d-flex justify-content-center align-items-center">
                 <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span><span>+</span>
               </div>
-              <p style="color: white;">Reklamiranih proizvoda.</p>
+              <p style="color: white;" data-aos="fade-up" data-aos-delay="200">Reklamiranih proizvoda.</p>
             </div>
           </div><!-- End Stats Item -->
 
@@ -502,7 +817,7 @@
               <div class="d-flex justify-content-center align-items-center">
                 <span data-purecounter-start="0" data-purecounter-end="50" data-purecounter-duration="1" class="purecounter"></span><span>+</span>
               </div>
-              <p style="color: white;">Planova za budućnost!</p>
+              <p style="color: white;" data-aos="fade-up" data-aos-delay="200">Planova za budućnost!</p>
             </div>
           </div><!-- End Stats Item -->
 
