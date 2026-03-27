@@ -827,6 +827,23 @@ section,
   transition: 0.3s;
 }
 
+.clients .client-logo-phone {
+  background-color: var(--surface-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+  overflow: hidden;
+}
+
+.clients .client-logo-phone img {
+  padding: 50px;
+  max-width: 75%;
+  transition: 0.3s;
+  height: 50%;
+}
+
 @media (max-width: 640px) {
   .clients .client-logo img {
     padding: 30px;

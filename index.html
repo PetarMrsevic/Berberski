@@ -147,13 +147,86 @@
 
       <div class="container">
 
-        <div class="row gy-4">
+        <div class="row gy-4 d-flex justify-content-center align-items-center">
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <!-- SWIPER 1 -->
+            <div class="col-lg-4 col-md-6 d-md-block d-lg-none d-sm-block" data-aos="fade-up" data-aos-delay="100">
+              <div class="swiper init-swiper gallerySwiper">
+                <script type="application/json" class="swiper-config">
+                {
+                  "loop": true,
+                  "speed": 600,
+                  "slidesPerView": 1,
+                  "spaceBetween": 20,
+                  "pagination": {
+                    "el": ".swiper-pagination",
+                    "clickable": true
+                  },
+                  "navigation": {
+                  "nextEl": ".swiper-button-next",
+                  "prevEl": ".swiper-button-prev"
+                  }
+                }
+                </script>
+
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="pricing-item">
+                    <p class="recommended-badge">Frizerka</p>
+                    <h3>Manja Berberski</h3>
+                    <img src="/assets/img/tim/manja.jpeg" alt="" style="width: 100%; max-height: 410px; object-fit: cover;">
+                      <div class="social-links d-flex justify-content-between px-4 mt-4 mb-3">
+                          <a data-bs-toggle="tooltip" title="+381 064 072 2706" href="tel:+381640722706"><i class="bi bi-telephone-fill"></i></a>
+                          <a data-bs-toggle="tooltip" title="@berberskisalonlepote" href="https://www.instagram.com/berberskisalonlepote" target="_blank"><i class="bi bi-instagram"></i></a>
+                          <a data-bs-toggle="tooltip" title="manjam98@gmail.com" href="mailto:manjam98@gmail.com" target="_blank"><i class="bi bi-envelope-fill"></i></a>
+                      </div>
+                    <!--<div class="btn-wrap">
+                      <a href="#" class="btn-buy">Pogledajte ponude</a>
+                    </div>-->
+                  </div>
+                  </div>
+                    <div class="swiper-slide">
+                    <div class="pricing-item">
+                    <p class="recommended-badge">Manikirka</p>
+                    <h3>Ana Bysko</h3>
+                    <img src="/assets/img/tim/ana.jpeg" alt="" style="width: 100%; max-height: 410px; object-fit: cover;">
+                    <div class="social-links d-flex justify-content-between px-4 mt-4 mb-3">
+                          <a data-bs-toggle="tooltip" title="+381 061 56 99 177" href="tel:+381615699177"><i class="bi bi-telephone-fill"></i></a>
+                          <a data-bs-toggle="tooltip" title="@love_nail_av" href="https://www.instagram.com/love_nail_av" target="_blank"><i class="bi bi-instagram"></i></a>
+                          <a data-bs-toggle="tooltip" title="anastasiabycko4@gmail.com" href="mailto:anastasiabycko4@gmail.com" target="_blank"><i class="bi bi-envelope-fill"></i></a>
+                    </div>
+                    <!--<div class="btn-wrap">
+                      <a href="#" class="btn-buy">Pogledajte ponude</a>
+                    </div>-->
+                  </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="pricing-item">
+                    <p class="recommended-badge">Šminkerka</p>
+                    <h3>Jelena Dojčin</h3>
+                    <img src="/assets/img/tim/jelena.jpeg" alt="" style="width: 100%; max-height: 410px; object-fit: cover; object-position: center;">
+                    <div class="social-links d-flex justify-content-between px-4 mt-4 mb-3">
+                          <a data-bs-toggle="tooltip" title="+381 062 197 2821" href="tel:+381621972821"><i class="bi bi-telephone-fill"></i></a>
+                          <a data-bs-toggle="tooltip" title="@makeup.artist.jelena" href="https://www.instagram.com/makeup.artist.jelena" target="_blank"><i class="bi bi-instagram"></i></a>
+                          <a data-bs-toggle="tooltip" title="jdojcin@gmail.com" href="mailto:jdojcin@gmail.com" target="_blank"><i class="bi bi-envelope-fill"></i></a>
+                    </div>
+                    <!--<div class="btn-wrap">
+                      <a href="#" class="btn-buy">Pogledajte ponude</a>
+                    </div>-->
+                  </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+            </div>
+
+          <div class="col-lg-4 col-md-6 d-none d-lg-block" data-aos="fade-up" data-aos-delay="100">
             <div class="pricing-item">
               <p class="recommended-badge">Frizerka</p>
               <h3>Manja Berberski</h3>
-              <img src="/assets/img/tim/manja.jpeg" alt="" style="width: 100%; max-height: 350px; object-fit: cover;">
+              <img src="/assets/img/tim/manja.jpeg" alt="" style="width: 100%; max-height: 410px; object-fit: cover;">
                 <div class="social-links d-flex justify-content-between px-4 mt-5 mb-3">
                     <a data-bs-toggle="tooltip" title="+381 064 072 2706" href="tel:+381640722706"><i class="bi bi-telephone-fill"></i></a>
                     <a data-bs-toggle="tooltip" title="@berberskisalonlepote" href="https://www.instagram.com/berberskisalonlepote" target="_blank"><i class="bi bi-instagram"></i></a>
@@ -165,11 +238,11 @@
             </div>
           </div><!-- End Pricing Item -->
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-4 col-md-6 d-none d-lg-block" data-aos="fade-up" data-aos-delay="200">
             <div class="pricing-item">
               <p class="recommended-badge">Manikirka</p>
               <h3>Ana Bysko</h3>
-              <img src="/assets/img/tim/ana.jpeg" alt="" style="width: 100%; max-height: 350px; object-fit: cover;">
+              <img src="/assets/img/tim/ana.jpeg" alt="" style="width: 100%; max-height: 410px; object-fit: cover;">
               <div class="social-links d-flex justify-content-between px-4 mt-5 mb-3">
                     <a data-bs-toggle="tooltip" title="+381 061 56 99 177" href="tel:+381615699177"><i class="bi bi-telephone-fill"></i></a>
                     <a data-bs-toggle="tooltip" title="@love_nail_av" href="https://www.instagram.com/love_nail_av" target="_blank"><i class="bi bi-instagram"></i></a>
@@ -181,11 +254,11 @@
             </div>
           </div><!-- End Pricing Item -->
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="col-lg-4 col-md-6 d-none d-lg-block" data-aos="fade-up" data-aos-delay="300">
             <div class="pricing-item">
               <p class="recommended-badge">Šminkerka</p>
               <h3>Jelena Dojčin</h3>
-              <img src="/assets/img/tim/jelena.jpeg" alt="" style="width: 100%; max-height: 350px; object-fit: cover; object-position: center;">
+              <img src="/assets/img/tim/jelena.jpeg" alt="" style="width: 100%; max-height: 410px; object-fit: cover; object-position: center;">
               <div class="social-links d-flex justify-content-between px-4 mt-5 mb-3">
                     <a data-bs-toggle="tooltip" title="+381 062 197 2821" href="tel:+381621972821"><i class="bi bi-telephone-fill"></i></a>
                     <a data-bs-toggle="tooltip" title="@makeup.artist.jelena" href="https://www.instagram.com/makeup.artist.jelena" target="_blank"><i class="bi bi-instagram"></i></a>
@@ -403,7 +476,7 @@
         </div>
 
 
-          <!-- MOBILE SWIPER -->
+        <!-- MOBILE SWIPER -->
         <div class="swiper init-swiper gallerySwiper d-lg-none pb-5" data-aos="fade-up" data-aos-delay="100">
 
             <script type="application/json" class="swiper-config">
@@ -583,7 +656,7 @@
 
           <div class="features-image col-lg-6" data-aos="fade-up" data-aos-delay="100"><img src="assets/img/masterclass1.jpeg" alt=""></div>
 
-          <div class="col-lg-6 order-lg-1">
+          <div class="col-lg-6 order-lg-1 d-flex flex-column justify-content-center">
 
             <div class="features-item d-flex ps-0 ps-lg-3 pt-4 pt-lg-0" data-aos="fade-up" data-aos-delay="200">
               <i class="bi bi-wifi flex-shrink-0"></i>
@@ -639,7 +712,7 @@
 
           <div class="practice-image col-lg-6 order-lg-2" data-aos="fade-up" data-aos-delay="100"><img src="assets/img/sertifikat2.jpeg" alt=""></div>
 
-          <div class="col-lg-6 order-lg-1">
+          <div class="col-lg-6 order-lg-1 d-flex flex-column justify-content-center">
 
             <div class="features-item d-flex ps-0 ps-lg-3 pt-4 pt-lg-0" data-aos="fade-up" data-aos-delay="200">
               <i class="bi bi-mortarboard-fill flex-shrink-0"></i>
@@ -685,13 +758,13 @@
 
         <div class="row gy-4">
 
-          <div class="features-image col-lg-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="features-image col-lg-6 text-center" data-aos="fade-up" data-aos-delay="100">
             <video style="max-width:600px; width:100%; height: 450px; border-radius: 20px;" disablePictureInPicture autoplay muted loop playsinline>
               <source src="assets/vids/reklama.mp4" type="video/mp4">
             </video>
           </div>
 
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
             
             <div class="features-item d-flex ps-0 ps-lg-3 pt-4 pt-lg-0" data-aos="fade-up" data-aos-delay="300">
               <i class="bi bi-camera-fill flex-shrink-0"></i>
@@ -723,35 +796,103 @@
 
         <div class="row g-0 clients-wrap" data-aos="fade-up" data-aos-delay="700">
 
-          <div class="col-xl-3 col-md-4 client-logo">
+          <!-- SWIPER 1 -->
+            <div class="col-lg-4 col-md-6 d-lg-none d-md-none d-sm-block" data-aos="fade-up" data-aos-delay="100">
+              <div class="swiper init-swiper gallerySwiper">
+                <script type="application/json" class="swiper-config">
+                {
+                  "loop": true,
+                  "speed": 600,
+                  "slidesPerView": 1,
+                  "spaceBetween": 20,
+                  "pagination": {
+                    "el": ".swiper-pagination",
+                    "clickable": true
+                  },
+                  "navigation": {
+                  "nextEl": ".swiper-button-next",
+                  "prevEl": ".swiper-button-prev"
+                  }
+                }
+                </script>
+
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="col-xl-3 col-md-4 client-logo-phone">
+                      <img src="assets/img/clients/client-1.jpg" class="img-fluid" alt="">
+                    </div><!-- End Client Item -->
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="col-xl-3 col-md-4 client-logo-phone">
+                      <img src="assets/img/clients/client-2.jpg" class="img-fluid" alt="">
+                    </div><!-- End Client Item -->
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="col-xl-3 col-md-4 client-logo-phone">
+                      <img src="assets/img/clients/client-3.jpg" class="img-fluid" alt="">
+                    </div><!-- End Client Item -->
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="col-xl-3 col-md-4 client-logo-phone">
+                      <img src="assets/img/clients/client-4.jpg" class="img-fluid" alt="">
+                    </div><!-- End Client Item -->
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="col-xl-3 col-md-4 client-logo-phone">
+                      <img src="assets/img/clients/client-5.jpg" class="img-fluid" alt="">
+                    </div><!-- End Client Item -->
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="col-xl-3 col-md-4 client-logo-phone">
+                      <img src="assets/img/clients/client-6.jpg" class="img-fluid" alt="">
+                    </div><!-- End Client Item -->
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="col-xl-3 col-md-4 client-logo-phone">
+                      <img src="assets/img/clients/client-7.jpg" class="img-fluid" alt="">
+                    </div><!-- End Client Item -->
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="col-xl-3 col-md-4 client-logo-phone">
+                      <img src="assets/img/clients/client-8.jpg" class="img-fluid" alt="">
+                    </div><!-- End Client Item -->
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+            </div>
+
+          <div class="col-xl-3 col-md-4 client-logo d-none d-lg-block d-md-block">
             <img src="assets/img/clients/client-1.jpg" class="img-fluid" alt="">
           </div><!-- End Client Item -->
 
-          <div class="col-xl-3 col-md-4 client-logo">
+          <div class="col-xl-3 col-md-4 client-logo d-none d-lg-block d-md-block">
             <img src="assets/img/clients/client-2.jpg" class="img-fluid" alt="">
           </div><!-- End Client Item -->
 
-          <div class="col-xl-3 col-md-4 client-logo">
+          <div class="col-xl-3 col-md-4 client-logo d-none d-lg-block d-md-block">
             <img src="assets/img/clients/client-3.jpg" class="img-fluid" alt="">
           </div><!-- End Client Item -->
 
-          <div class="col-xl-3 col-md-4 client-logo">
+          <div class="col-xl-3 col-md-4 client-logo d-none d-lg-block d-md-block">
             <img src="assets/img/clients/client-4.jpg" class="img-fluid" alt="">
           </div><!-- End Client Item -->
 
-          <div class="col-xl-3 col-md-4 client-logo">
+          <div class="col-xl-3 col-md-4 client-logo d-none d-lg-block d-md-block">
             <img src="assets/img/clients/client-5.jpg" class="img-fluid" alt="">
           </div><!-- End Client Item -->
 
-          <div class="col-xl-3 col-md-4 client-logo">
+          <div class="col-xl-3 col-md-4 client-logo d-none d-lg-block d-md-block">
             <img src="assets/img/clients/client-6.jpg" class="img-fluid" alt="">
           </div><!-- End Client Item -->
 
-          <div class="col-xl-3 col-md-4 client-logo">
+          <div class="col-xl-3 col-md-4 client-logo d-none d-lg-block d-md-block">
             <img src="assets/img/clients/client-7.jpg" class="img-fluid" alt="">
           </div><!-- End Client Item -->
 
-          <div class="col-xl-3 col-md-4 client-logo">
+          <div class="col-xl-3 col-md-4 client-logo d-none d-lg-block d-md-block">
             <img src="assets/img/clients/client-8.jpg" class="img-fluid" alt="">
           </div><!-- End Client Item -->
 
