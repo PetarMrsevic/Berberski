@@ -480,6 +480,11 @@ h6 {
   padding-top: 5px;
 }
 
+.contact-icon:hover {
+  color: var(--nav-dropdown-color);
+  transition: all 0.3s;
+}
+
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
