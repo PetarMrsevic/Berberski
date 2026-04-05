@@ -67,13 +67,11 @@
       const alertBox = document.getElementById("topAlert");
       const header = document.getElementById("header");
 
-      // Pojavi alert i pomeri navbar
       setTimeout(() => {
         alertBox.classList.add("show");
         header.classList.add("move");
       }, 200);
 
-      // Nestane posle 5 sekundi i vrati navbar nazad
       setTimeout(() => {
         alertBox.classList.remove("show");
         header.classList.remove("move");
@@ -355,7 +353,7 @@
 
     </section><!-- /Services Section -->
 
-    <section id="gallery" class="section"><!-- Gallery Section -->
+    <section id="gallery" class="gallery section"><!-- Gallery Section -->
 
       <div class="container section-title" data-aos="fade-up">
         <h2>Galerija</h2>
