@@ -660,6 +660,28 @@ section,
   font-size: 24px;
 }
 
+.hero .scroll-down-arrows {
+  position: absolute;
+  bottom: 0;
+  top: 200%;
+}
+
+.hero .scroll-down-arrow {
+  font-size: 22px;
+  color: var(--contrast-color);
+  height: auto;
+  width: 10px;
+}
+
+.scroll-down-arrow:nth-child(1) { animation: bounce-fade 1.6s ease-in-out infinite 0s; }
+.scroll-down-arrow:nth-child(2) { animation: bounce-fade 1.6s ease-in-out infinite 0.2s; }
+.scroll-down-arrow:nth-child(3) { animation: bounce-fade 1.6s ease-in-out infinite 0.4s; }
+
+@keyframes bounce-fade {
+  0%, 100% { opacity: 0.2; transform: translateY(0); }
+  50%       { opacity: 1;   transform: translateY(6px); }
+}
+
 @media (max-width: 768px) {
   .hero h2 {
     font-size: 32px;
