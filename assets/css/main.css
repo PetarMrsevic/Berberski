@@ -160,6 +160,7 @@ h6 {
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
+
 /* Desktop Navigation */
 @media (min-width: 1200px) {
   .navmenu {
@@ -414,7 +415,10 @@ h6 {
   }
 
   .mobile-nav-active .navmenu>ul {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }
 
