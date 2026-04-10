@@ -44,12 +44,12 @@
       <nav id="navmenu" class="navmenu">
         <ul class="navmenu-list">
           <li><a href="#about">O nama</a></li>
-          <li><a href="#pricing">Upoznajte nas</a></li>
+          <li><a href="#workers">Upoznajte nas</a></li>
           <li><a href="#services">Usluge</a></li>
           <li><a href="#gallery">Galerija</a></li>
-          <li><a href="#features">Saradnje</a></li>
+          <li><a href="#collabs">Saradnje</a></li>
           <li><a href="#practices">Obuke</a></li>
-          <li><a href="#clients">Promocije</a></li>
+          <li><a href="#promos">Promocije</a></li>
           <li><a href="#faq">FAQ</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list d-flex"></i>
@@ -59,33 +59,6 @@
 
     </div>
   </header>
-
-  <script>
-    window.addEventListener("load", function () {
-
-      const alertBox = document.getElementById("topAlert");
-      const header = document.getElementById("header");
-
-      setTimeout(() => {
-        alertBox.classList.add("show");
-        header.classList.add("move");
-      }, 200);
-
-      setTimeout(() => {
-        alertBox.classList.remove("show");
-        header.classList.remove("move");
-      }, 5200);
-
-      alertBox.addEventListener("transitionend", (e) => {
-      if (!alertBox.classList.contains("show")) {
-        alertBox.style.display = "none";
-        }
-      });
-
-    });
-  </script>
-
-
   <main class="main">
 
     <!-- Hero Section -->
@@ -138,8 +111,8 @@
 
     </section><!-- /About Section -->
 
-    <!-- Pricing Section -->
-    <section id="pricing" class="pricing section light-background">
+    <!-- Workers Section -->
+    <section id="workers" class="workers section light-background">
 
       <!-- Section Title -->
       <div class="container section-title justify-content-center" data-aos="fade-up">
@@ -173,14 +146,14 @@
 
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
-                    <div class="pricing-item">
+                    <div class="worker-item">
                     <p class="recommended-badge">Frizerka</p>
                     <h3>Manja Berberski</h3>
                     <img src="/assets/img/tim/manja.jpeg" alt="hairdresser Manja Berberski" style="width: 100%; max-height: 410px; object-fit: cover;">
                       <div class="social-links d-flex justify-content-between px-4 mt-4 mb-3">
                           <a data-bs-toggle="tooltip" title="+381 064 072 2706" href="tel:+381640722706"><i class="bi bi-telephone-fill"></i></a>
                           <a data-bs-toggle="tooltip" title="@berberskisalonlepote" href="https://www.instagram.com/berberskisalonlepote" target="_blank"><i class="bi bi-instagram"></i></a>
-                          <a data-bs-toggle="tooltip" title="manjam98@gmail.com" href="mailto:manjam98@gmail.com" target="_blank"><i class="bi bi-envelope-fill"></i></a>
+                          <a data-bs-toggle="tooltip" title="manjam92@gmail.com" href="mailto:manjam92@gmail.com" target="_blank"><i class="bi bi-envelope-fill"></i></a>
                       </div>
                     <!--<div class="btn-wrap">
                       <a href="#" class="btn-buy">Pogledajte ponude</a>
@@ -188,7 +161,7 @@
                   </div>
                   </div>
                     <div class="swiper-slide">
-                    <div class="pricing-item">
+                    <div class="worker-item">
                     <p class="recommended-badge">Manikirka</p>
                     <h3>Ana Bysko</h3>
                     <img src="/assets/img/tim/ana.jpeg" alt="nail technician Ana Bysko" style="width: 100%; max-height: 410px; object-fit: cover;">
@@ -203,7 +176,7 @@
                   </div>
                   </div>
                   <div class="swiper-slide">
-                    <div class="pricing-item">
+                    <div class="worker-item">
                     <p class="recommended-badge">Šminkerka</p>
                     <h3>Jelena Dojčin</h3>
                     <img src="/assets/img/tim/jelena.jpeg" alt="makeup artist Jelena Dojčin" style="width: 100%; max-height: 410px; object-fit: cover; object-position: center;">
@@ -225,23 +198,23 @@
             </div>
 
           <div class="col-lg-4 col-md-6 d-none d-lg-block" data-aos="fade-up" data-aos-delay="100">
-            <div class="pricing-item">
+            <div class="worker-item">
               <p class="recommended-badge">Frizerka</p>
               <h3>Manja Berberski</h3>
               <img src="/assets/img/tim/manja.jpeg" alt="hairdresser Manja Berberski" style="width: 100%; max-height: 410px; object-fit: cover;">
                 <div class="social-links d-flex justify-content-between px-4 mt-5 mb-3">
                     <a data-bs-toggle="tooltip" title="+381 064 072 2706" href="tel:+381640722706"><i class="bi bi-telephone-fill"></i></a>
                     <a data-bs-toggle="tooltip" title="@berberskisalonlepote" href="https://www.instagram.com/berberskisalonlepote" target="_blank"><i class="bi bi-instagram"></i></a>
-                    <a data-bs-toggle="tooltip" title="manjam92@gmail.com" href="mailto:manjam98@gmail.com" target="_blank"><i class="bi bi-envelope-fill"></i></a>
+                    <a data-bs-toggle="tooltip" title="manjam92@gmail.com" href="mailto:manjam92@gmail.com" target="_blank"><i class="bi bi-envelope-fill"></i></a>
                 </div>
               <!--<div class="btn-wrap">
                 <a href="#" class="btn-buy">Pogledajte ponude</a>
               </div>-->
             </div>
-          </div><!-- End Pricing Item -->
+          </div><!-- End Worker Item -->
 
           <div class="col-lg-4 col-md-6 d-none d-lg-block" data-aos="fade-up" data-aos-delay="200">
-            <div class="pricing-item">
+            <div class="worker-item">
               <p class="recommended-badge">Manikirka</p>
               <h3>Ana Bysko</h3>
               <img src="/assets/img/tim/ana.jpeg" alt="nail technician Ana Bysko" style="width: 100%; max-height: 410px; object-fit: cover;">
@@ -254,10 +227,10 @@
                 <a href="#" class="btn-buy">Pogledajte ponude</a>
               </div>-->
             </div>
-          </div><!-- End Pricing Item -->
+          </div><!-- End Worker Item -->
 
           <div class="col-lg-4 col-md-6 d-none d-lg-block" data-aos="fade-up" data-aos-delay="300">
-            <div class="pricing-item">
+            <div class="worker-item">
               <p class="recommended-badge">Šminkerka</p>
               <h3>Jelena Dojčin</h3>
               <img src="/assets/img/tim/jelena.jpeg" alt="makeup artist Jelena Dojčin" style="width: 100%; max-height: 410px; object-fit: cover; object-position: center;">
@@ -270,13 +243,13 @@
                 <a href="#" class="btn-buy">Pogledajte ponude</a>
               </div>-->
             </div>
-          </div><!-- End Pricing Item -->
+          </div><!-- End Worker Item -->
 
         </div>
 
       </div>
 
-    </section><!-- /Pricing Section -->
+    </section><!-- /Workers Section -->
 
     <!-- Services Section -->
     <section id="services" class="services section">
@@ -371,7 +344,6 @@
 
             <!-- SWIPER 1 -->
             <div class="col-lg-4 col-md-6 d-none d-lg-block" data-aos="fade-up" data-aos-delay="100">
-              <p class="text-center">Manja Berberski</p>
               <div class="swiper init-swiper gallerySwiper">
                 <script type="application/json" class="swiper-config">
                 {
@@ -406,7 +378,6 @@
 
             <!-- SWIPER 2 -->
             <div class="col-lg-4 col-md-6 d-none d-lg-block" data-aos="fade-up" data-aos-delay="200">
-              <p class="text-center">Ana Bysko</p>
               <div class="swiper init-swiper gallerySwiper">
                 <script type="application/json" class="swiper-config">
                 {
@@ -441,7 +412,6 @@
 
             <!-- SWIPER 3 -->
             <div class="col-lg-4 col-md-6 d-none d-lg-block" data-aos="fade-up" data-aos-delay="300">
-              <p class="text-center">Jelena Dojčin</p>
               <div class="swiper init-swiper gallerySwiper">
                 <script type="application/json" class="swiper-config">
                 {
@@ -644,8 +614,8 @@
 
     </section><!-- Gallery Section -->
 
-    <!-- Features Section -->
-    <section id="features" class="features section">
+    <!-- Collabs Section -->
+    <section id="collabs" class="collabs section">
 
       <div class="container section-title" data-aos="fade-up">
         <h2>Saradnje</h2>
@@ -656,41 +626,41 @@
 
         <div class="row gy-4">
 
-          <div class="features-image col-lg-6" data-aos="fade-up" data-aos-delay="100"><img src="assets/img/masterclass1.jpeg" alt=""></div>
+          <div class="collab-image col-lg-6" data-aos="fade-up" data-aos-delay="100"><img src="assets/img/masterclass1.jpeg" alt=""></div>
 
           <div class="col-lg-6 order-lg-1 d-flex flex-column justify-content-center">
 
-            <div class="features-item d-flex ps-0 ps-lg-3 pt-4 pt-lg-0" data-aos="fade-up" data-aos-delay="200">
+            <div class="collab-item d-flex ps-0 ps-lg-3 pt-4 pt-lg-0" data-aos="fade-up" data-aos-delay="200">
               <i class="bi bi-wifi flex-shrink-0"></i>
               <div>
                 <h4>Način povezivanja.</h4>
                 <p>Salon ima ideju o fizičkoj saradnji sa kolegama kako bi doveli najbolje frizere i edukatore u Zrenjanin, kako bismo omogućili ljudima da se edukuju bez odlaska u druge gradove.</p>
               </div>
-            </div><!-- End Features Item-->
+            </div><!-- End Collab Item-->
 
-            <div class="features-item d-flex mt-5 ps-0 ps-lg-3" data-aos="fade-up" data-aos-delay="300">
+            <div class="collab-item d-flex mt-5 ps-0 ps-lg-3" data-aos="fade-up" data-aos-delay="300">
               <i class="bi bi-question-lg flex-shrink-0"></i>
               <div>
                 <h4>Zašto je potrebna saradnja?</h4>
                 <p>Jer omogućava razmenu znanja i iskustva, što dovodi do poboljšanja kvaliteta usluga i razvoja profesionalnih veština na lokalnom nivou.</p>
               </div>
-            </div><!-- End Features Item-->
+            </div><!-- End Collab Item-->
 
-            <div class="features-item d-flex mt-5 ps-0 ps-lg-3" data-aos="fade-up" data-aos-delay="400">
+            <div class="collab-item d-flex mt-5 ps-0 ps-lg-3" data-aos="fade-up" data-aos-delay="400">
               <i class="bi bi-geo-alt-fill flex-shrink-0"></i>
               <div>
                 <h4>Lokacija saradnje.</h4>
                 <p>Dogovor o saradnji se vrši na teritoriji grada <b><u>ZRENJANINA</u></b>.</p>
               </div>
-            </div><!-- End Features Item-->
+            </div><!-- End Collab Item-->
 
-            <div class="features-item d-flex mt-5 ps-0 ps-lg-3" data-aos="fade-up" data-aos-delay="500">
+            <div class="collab-item d-flex mt-5 ps-0 ps-lg-3" data-aos="fade-up" data-aos-delay="500">
               <i class="bi bi-filetype-pdf flex-shrink-0"></i>
               <div>
                 <h4>Zainteresovani ste za saradnju?</h4>
                 <p>Dokument o saradnji pogledajte <b><a href="assets/docs/Berberski - Saradnje.pdf" target="_blank">OVDE</a></b>.</p>
               </div>
-            </div><!-- End Features Item-->
+            </div><!-- End Collab Item-->
 
           </div>
 
@@ -698,10 +668,10 @@
 
       </div>
 
-    </section><!-- /Features Section -->
+    </section><!-- /Collabs Section -->
 
-    <!-- Features Section -->
-    <section id="practices" class="features section">
+    <!-- Practices Section -->
+    <section id="practices" class="practices section">
 
       <div class="container section-title" data-aos="fade-up">
         <h2>Obuke</h2>
@@ -716,29 +686,29 @@
 
           <div class="col-lg-6 order-lg-1 d-flex flex-column justify-content-center">
 
-            <div class="features-item d-flex ps-0 ps-lg-3 pt-4 pt-lg-0" data-aos="fade-up" data-aos-delay="200">
+            <div class="practice-item d-flex ps-0 ps-lg-3 pt-4 pt-lg-0" data-aos="fade-up" data-aos-delay="200">
               <i class="bi bi-mortarboard-fill flex-shrink-0"></i>
               <div>
                 <h4>Frizerska obuka.</h4>
                 <p>Program <b><u>FRIZERSKE</u></b> obuke je osmišljen tako da omogući polaznicima da rade na realnim modelima i razviju sigurnost u radu, uz mentorsku podršku. Cilj obuka je unapređenje profesionalnih veština, sticanje novih znanja i kreativnih tehnika, kao i osposobljavanje za rad u modernom salonu, uz praćenje najnovijih trendova u frizerskoj industriji.</p>
               </div>
-            </div><!-- End Features Item-->
+            </div><!-- End Practice Item-->
 
-            <div class="features-item d-flex ps-0 ps-lg-3 pt-4 pt-lg-0 mt-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="practice-item d-flex ps-0 ps-lg-3 pt-4 pt-lg-0 mt-4" data-aos="fade-up" data-aos-delay="300">
               <i class="bi bi-question-lg flex-shrink-0"></i>
               <div>
                 <h4>Šta Vam garantujemo obukom?</h4>
                 <p>Garantujemo kvalitetno obrazovanje, praktično iskustvo i podršku tokom celog procesa učenja. Naš cilj je da Vam omogućimo da razvijete profesionalne veštine i postanete sigurni u radu, uz mentorsku podršku.</p>
               </div>
-            </div><!-- End Features Item-->
+            </div><!-- End Practice Item-->
 
-            <div class="features-item d-flex ps-0 ps-lg-3 pt-4 pt-lg-0 mt-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="practice-item d-flex ps-0 ps-lg-3 pt-4 pt-lg-0 mt-4" data-aos="fade-up" data-aos-delay="400">
               <i class="bi bi-filetype-pdf flex-shrink-0"></i>
               <div>
                 <h4>Zainteresovani ste za obuku?</h4>
                 <p>Više o obukama pogledajte <b><a href="assets/docs/Berberski - Frizerska obuka.pdf" target="_blank">OVDE</a></b>.</p>
               </div>
-            </div><!-- End Features Item-->
+            </div><!-- End Practice Item-->
 
           </div>
 
@@ -746,10 +716,10 @@
 
       </div>
 
-    </section><!-- /Features Section -->
+    </section><!-- /Practices Section -->
 
-    <!-- Clients Section -->
-    <section id="clients" class="clients section">
+    <!-- Promos Section -->
+    <section id="promos" class="promos section">
 
       <div class="container section-title" data-aos="fade-up">
         <h2>Promocije</h2>
@@ -760,7 +730,7 @@
 
         <div class="row gy-4">
 
-          <div class="features-image col-lg-6 text-center" data-aos="fade-up" data-aos-delay="100">
+          <div class="promo-image col-lg-6 text-center" data-aos="fade-up" data-aos-delay="100">
             <video style="max-width:600px; width:100%; height: 450px; border-radius: 20px;" disablePictureInPicture autoplay muted loop playsinline>
               <source src="assets/vids/reklama.mp4" type="video/mp4">
             </video>
@@ -768,33 +738,35 @@
 
           <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
             
-            <div class="features-item d-flex ps-0 ps-lg-3 pt-4 pt-lg-0" data-aos="fade-up" data-aos-delay="300">
+            <div class="promo-item d-flex ps-0 ps-lg-3 pt-4 pt-lg-0" data-aos="fade-up" data-aos-delay="300">
               <i class="bi bi-camera-fill flex-shrink-0"></i>
               <div>
                 <h4>Od proizvodnje do prezentacije.</h4>
                 <p>Salon pruža podršku manjim proizvođačima u procesu izbijanja na tržištu. Uz konstruktivan dogovor, Vaš proizvod može da dobije video o njemu, koji dospeva na instagram stranicu salona.</p>
               </div>
-            </div><!-- End Features Item-->
+            </div><!-- End Promo Item-->
 
-            <div class="features-item d-flex ps-0 ps-lg-3 pt-4 pt-lg-0 mt-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="promo-item d-flex ps-0 ps-lg-3 pt-4 pt-lg-0 mt-4" data-aos="fade-up" data-aos-delay="400">
               <i class="bi bi-question-lg flex-shrink-0"></i>
               <div>
                 <h4>Da li reklamiramo u svoju korist?</h4>
                 <p>Naravno da ne. Reklamiramo proizvode koje smatramo kvalitetnim i relevantnim za ljude. Ako Vaš proizvod ne može da se probije na tržište, to ne znači da nije dobar, već je potrebno da se bolje promoviše. Došli ste na pravo mesto za tako nešto!</p>
               </div>
-            </div><!-- End Features Item-->
+            </div><!-- End Promo Item-->
 
-            <div class="features-item d-flex ps-0 ps-lg-3 pt-4 pt-lg-0 mt-4" data-aos="fade-up" data-aos-delay="500">
+            <div class="promo-item d-flex ps-0 ps-lg-3 pt-4 pt-lg-0 mt-4" data-aos="fade-up" data-aos-delay="500">
               <i class="bi bi-filetype-pdf flex-shrink-0"></i>
               <div>
                 <h4>Želite da Vaš proizvod bude reklamiran?</h4>
                 <p>Uputstvo o reklamiranju pogledajte <b><a href="assets/docs/Berberski - Uputstvo za reklamiranje.pdf" target="_blank">OVDE</a></b>.</p>
               </div>
-            </div><!-- End Features Item-->
+            </div><!-- End Promo Item-->
 
           </div>
 
-        <div class="row g-0 clients-wrap" data-aos="fade-up" data-aos-delay="700">
+        </div>
+
+        <div class="row g-0 promos-wrap" data-aos="fade-up" data-aos-delay="700">
 
           <!-- SWIPER 1 -->
             <div class="col-lg-4 col-md-6 d-lg-none d-md-none d-sm-block" data-aos="fade-up" data-aos-delay="100">
@@ -818,44 +790,44 @@
 
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
-                    <div class="col-xl-3 col-md-4 client-logo-phone">
-                      <img src="assets/img/clients/client-1.jpg" class="img-fluid" alt="">
-                    </div><!-- End Client Item -->
+                    <div class="col-xl-3 col-md-4 promo-logo-phone">
+                      <img src="assets/img/promos/promo-1.jpg" class="img-fluid" alt="">
+                    </div><!-- End Promo Item -->
                   </div>
                   <div class="swiper-slide">
-                    <div class="col-xl-3 col-md-4 client-logo-phone">
-                      <img src="assets/img/clients/client-2.jpg" class="img-fluid" alt="">
-                    </div><!-- End Client Item -->
+                    <div class="col-xl-3 col-md-4 promo-logo-phone">
+                      <img src="assets/img/promos/promo-2.jpg" class="img-fluid" alt="">
+                    </div><!-- End Promo Item -->
                   </div>
                   <div class="swiper-slide">
-                    <div class="col-xl-3 col-md-4 client-logo-phone">
-                      <img src="assets/img/clients/client-3.jpg" class="img-fluid" alt="">
-                    </div><!-- End Client Item -->
+                    <div class="col-xl-3 col-md-4 promo-logo-phone">
+                      <img src="assets/img/promos/promo-3.jpg" class="img-fluid" alt="">
+                    </div><!-- End Promo Item -->
                   </div>
                   <div class="swiper-slide">
-                    <div class="col-xl-3 col-md-4 client-logo-phone">
-                      <img src="assets/img/clients/client-4.jpg" class="img-fluid" alt="">
-                    </div><!-- End Client Item -->
+                    <div class="col-xl-3 col-md-4 promo-logo-phone">
+                      <img src="assets/img/promos/promo-4.jpg" class="img-fluid" alt="">
+                    </div><!-- End Promo Item -->
                   </div>
                   <div class="swiper-slide">
-                    <div class="col-xl-3 col-md-4 client-logo-phone">
-                      <img src="assets/img/clients/client-5.jpg" class="img-fluid" alt="">
-                    </div><!-- End Client Item -->
+                    <div class="col-xl-3 col-md-4 promo-logo-phone">
+                      <img src="assets/img/promos/promo-5.jpg" class="img-fluid" alt="">
+                    </div><!-- End Promo Item -->
                   </div>
                   <div class="swiper-slide">
-                    <div class="col-xl-3 col-md-4 client-logo-phone">
-                      <img src="assets/img/clients/client-6.jpg" class="img-fluid" alt="">
-                    </div><!-- End Client Item -->
+                    <div class="col-xl-3 col-md-4 promo-logo-phone">
+                      <img src="assets/img/promos/promo-6.jpg" class="img-fluid" alt="">
+                    </div><!-- End Promo Item -->
                   </div>
                   <div class="swiper-slide">
-                    <div class="col-xl-3 col-md-4 client-logo-phone">
-                      <img src="assets/img/clients/client-7.jpg" class="img-fluid" alt="">
-                    </div><!-- End Client Item -->
+                    <div class="col-xl-3 col-md-4 promo-logo-phone">
+                      <img src="assets/img/promos/promo-7.jpg" class="img-fluid" alt="">
+                    </div><!-- End Promo Item -->
                   </div>
                   <div class="swiper-slide">
-                    <div class="col-xl-3 col-md-4 client-logo-phone">
-                      <img src="assets/img/clients/client-8.jpg" class="img-fluid" alt="">
-                    </div><!-- End Client Item -->
+                    <div class="col-xl-3 col-md-4 promo-logo-phone">
+                      <img src="assets/img/promos/promo-8.jpg" class="img-fluid" alt="">
+                    </div><!-- End Promo Item -->
                   </div>
                 </div>
                 <div class="swiper-pagination"></div>
@@ -864,43 +836,43 @@
               </div>
             </div>
 
-          <div class="col-xl-3 col-md-4 client-logo d-none d-lg-block d-md-block text-center">
-            <img src="assets/img/clients/client-1.jpg" class="img-fluid" alt="cosmetic producer 1">
-          </div><!-- End Client Item -->
+          <div class="col-xl-3 col-md-4 promo-logo d-none d-lg-block d-md-block text-center">
+            <img src="assets/img/promos/promo-1.jpg" class="img-fluid" alt="cosmetic producer 1">
+          </div><!-- End Promo Item -->
 
-          <div class="col-xl-3 col-md-4 client-logo d-none d-lg-block d-md-block text-center">
-            <img src="assets/img/clients/client-2.jpg" class="img-fluid" alt="cosmetic producer 2">
-          </div><!-- End Client Item -->
+          <div class="col-xl-3 col-md-4 promo-logo d-none d-lg-block d-md-block text-center">
+            <img src="assets/img/promos/promo-2.jpg" class="img-fluid" alt="cosmetic producer 2">
+          </div><!-- End Promo Item -->
 
-          <div class="col-xl-3 col-md-4 client-logo d-none d-lg-block d-md-block text-center">
-            <img src="assets/img/clients/client-3.jpg" class="img-fluid" alt="cosmetic producer 3">
-          </div><!-- End Client Item -->
+          <div class="col-xl-3 col-md-4 promo-logo d-none d-lg-block d-md-block text-center">
+            <img src="assets/img/promos/promo-3.jpg" class="img-fluid" alt="cosmetic producer 3">
+          </div><!-- End Promo Item -->
 
-          <div class="col-xl-3 col-md-4 client-logo d-none d-lg-block d-md-block text-center">
-            <img src="assets/img/clients/client-4.jpg" class="img-fluid" alt="cosmetic producer 4">
-          </div><!-- End Client Item -->
+          <div class="col-xl-3 col-md-4 promo-logo d-none d-lg-block d-md-block text-center">
+            <img src="assets/img/promos/promo-4.jpg" class="img-fluid" alt="cosmetic producer 4">
+          </div><!-- End Promo Item -->
 
-          <div class="col-xl-3 col-md-4 client-logo d-none d-lg-block d-md-block text-center">
-            <img src="assets/img/clients/client-5.jpg" class="img-fluid" alt="cosmetic producer 5">
-          </div><!-- End Client Item -->
+          <div class="col-xl-3 col-md-4 promo-logo d-none d-lg-block d-md-block text-center">
+            <img src="assets/img/promos/promo-5.jpg" class="img-fluid" alt="cosmetic producer 5">
+          </div><!-- End Promo Item -->
 
-          <div class="col-xl-3 col-md-4 client-logo d-none d-lg-block d-md-block text-center">
-            <img src="assets/img/clients/client-6.jpg" class="img-fluid" alt="cosmetic producer 6">
-          </div><!-- End Client Item -->
+          <div class="col-xl-3 col-md-4 promo-logo d-none d-lg-block d-md-block text-center">
+            <img src="assets/img/promos/promo-6.jpg" class="img-fluid" alt="cosmetic producer 6">
+          </div><!-- End Promo Item -->
 
-          <div class="col-xl-3 col-md-4 client-logo d-none d-lg-block d-md-block text-center">
-            <img src="assets/img/clients/client-7.jpg" class="img-fluid" alt="cosmetic producer 7">
-          </div><!-- End Client Item -->
+          <div class="col-xl-3 col-md-4 promo-logo d-none d-lg-block d-md-block text-center">
+            <img src="assets/img/promos/promo-7.jpg" class="img-fluid" alt="cosmetic producer 7">
+          </div><!-- End Promo Item -->
 
-          <div class="col-xl-3 col-md-4 client-logo d-none d-lg-block d-md-block text-center">
-            <img src="assets/img/clients/client-8.jpg" class="img-fluid" alt="cosmetic producer 8">
-          </div><!-- End Client Item -->
+          <div class="col-xl-3 col-md-4 promo-logo d-none d-lg-block d-md-block text-center">
+            <img src="assets/img/promos/promo-8.jpg" class="img-fluid" alt="cosmetic producer 8">
+          </div><!-- End Promo Item -->
 
         </div>
 
       </div>
 
-    </section><!-- /Clients Section -->
+    </section><!-- /Promos Section -->
 
     <!-- Stats Section -->
     <section id="stats" class="stats section dark-background">
