@@ -896,17 +896,12 @@ section,
 /*--------------------------------------------------------------
 # Pricing Section
 --------------------------------------------------------------*/
-.workers {
-  background-color: var(--surface-color);
-}
-
 .workers .worker-item {
   padding: 40px 20px;
   text-align: center;
   border-radius: 8px;
   position: relative;
   overflow: hidden;
-  background-color: var(--surface-color);
 }
 
 .workers .worker-item i{
@@ -988,13 +983,6 @@ section,
   background: color-mix(in srgb, var(--accent-color), transparent 92%);
   color: var(--accent-color);
   border-radius: 50px;
-}
-
-/*--------------------------------------------------------------
-# Gallery Section
---------------------------------------------------------------*/
-.gallery {
-  background-color: var(--surface-color);
 }
 
 /*--------------------------------------------------------------
