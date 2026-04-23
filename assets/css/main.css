@@ -691,9 +691,6 @@ section,
 /*--------------------------------------------------------------
 # Collabs Section
 --------------------------------------------------------------*/
-.collabs {
-  background-color: var(--surface-color);
-}
 
 .collabs .collab-image {
   position: relative;
@@ -733,9 +730,6 @@ section,
 /*--------------------------------------------------------------
 # Practices Section
 --------------------------------------------------------------*/
-.practices {
-  background-color: var(--surface-color);
-}
 
 .practices .practice-item h4 {
   font-size: 20px;
@@ -774,9 +768,6 @@ section,
 /*--------------------------------------------------------------
 # Promos Section
 --------------------------------------------------------------*/
-.promos {
-  background-color: var(--surface-color);
-}
 
 .promos .promo-video {
   position: relative;
