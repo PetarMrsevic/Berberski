@@ -1,5 +1,17 @@
 (function() {
 
+  /** Vracanje na vrh pri refreshu */
+  window.addEventListener("load", () => {
+  if (window.location.hash) {
+    history.replaceState(null, null, ' ');
+    window.scrollTo(0, 0);
+  }
+  });
+
+  window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  };
+
   /**
    * Top Alert
    * 
@@ -17,7 +29,7 @@
       setTimeout(() => {
         alertBox.classList.remove("show");
         header.classList.remove("move");
-      }, 5200);
+      }, 3200);
 
       alertBox.addEventListener("transitionend", (e) => {
       if (!alertBox.classList.contains("show")) {
