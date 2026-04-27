@@ -689,6 +689,40 @@ section,
 }
 
 /*--------------------------------------------------------------
+# Gallery Section
+--------------------------------------------------------------*/
+
+.gallery-type {
+  max-width: 100%;
+}
+
+.gallery-type-button {
+  background: var(--accent-color);
+  border: none;
+  border-radius: 50px;
+  transition: 0.3s;
+  margin: 10px 10px;
+  opacity: 0.5;
+}
+
+.gallery-type img {
+  max-width: 50%;
+}
+
+.gallery-type-button-active {
+  opacity: 1;
+}
+
+.mobile-gallery {
+  display: none;
+}
+
+.mobile-gallery-active {
+  display: block;
+}
+
+
+/*--------------------------------------------------------------
 # Collabs Section
 --------------------------------------------------------------*/
 

@@ -170,6 +170,32 @@
   });
 
   /**
+   * Gallery Change
+   */
+  const buttons = document.querySelectorAll('.gallery-type-button');
+  const galleries = document.querySelectorAll('.mobile-gallery, .mobile-gallery-active');
+
+  buttons.forEach((btn, index) => {
+    btn.addEventListener('click', () => {
+
+      // reset dugmad
+      buttons.forEach(b => b.classList.remove('gallery-type-button-active'));
+      
+      // reset galerije
+      galleries.forEach(g => {
+        g.classList.remove('mobile-gallery-active');
+        g.classList.add('mobile-gallery');
+      });
+
+      // aktiviraj kliknuto dugme
+      btn.classList.add('gallery-type-button-active');
+
+      // aktiviraj odgovarajuću galeriju (po indexu)
+      galleries[index].classList.add('mobile-gallery-active');
+    });
+  });
+
+  /**
    * Navmenu Scrollspy
    */
   let navmenulinks = document.querySelectorAll('.navmenu a');
