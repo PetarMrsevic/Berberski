@@ -1,10 +1,9 @@
 (function() {
 
-  /** Vracanje na vrh pri refreshu */
+  /** Going back to the top after refresh */
   window.addEventListener("load", () => {
   if (window.location.hash) {
     history.replaceState(null, null, ' ');
-    window.scrollTo(0, 0);
   }
   });
 
