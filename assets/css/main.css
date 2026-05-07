@@ -799,11 +799,6 @@ section,
 # Promos Section
 --------------------------------------------------------------*/
 
-.promos .promo-video {
-  position: relative;
-  min-height: 400px;
-}
-
 .promos .promo-item h4 {
   font-size: 20px;
   font-weight: 700;
