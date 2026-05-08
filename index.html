@@ -887,12 +887,12 @@
 
                 <div class="form-group mb-3">
                   <label for="fullName">Ime i prezime</label>
-                  <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Petar Petrović" required>
+                  <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Petar Petrović" required oninvalid="this.setCustomValidity('Molimo unesite vaše ime i prezime.')" oninput="this.setCustomValidity('')">
                 </div>
 
                 <div class="form-group mb-3">
                   <label for="email">E-mail</label>
-                  <input type="email" class="form-control" id="email" name="email" placeholder="vašemail@gmail.com" required>
+                  <input type="email" class="form-control" id="email" name="email" placeholder="vašemail@gmail.com" required oninvalid="this.setCustomValidity('Molimo unesite validan email.')" oninput="this.setCustomValidity('')">
                 </div>
 
                 <p>
@@ -917,7 +917,7 @@
 
                 <div class="form-group mb-4">
                   <label for="message">Poruka</label>
-                  <textarea class="form-control" id="message" name="message" required></textarea>
+                  <textarea class="form-control" id="message" name="message" required oninvalid="this.setCustomValidity('Molimo unesite poruku.')" oninput="this.setCustomValidity('')"></textarea>
                 </div>
 
                 <button type="submit" class="feedback-btn">
