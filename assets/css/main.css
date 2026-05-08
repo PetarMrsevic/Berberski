@@ -940,6 +940,9 @@ section,
 
 .workers .worker-item img {
   border-radius: 20px;
+  width: 100%;
+  max-height: 410px;
+  object-fit: cover;
 }
 
 .workers .worker-item p {
