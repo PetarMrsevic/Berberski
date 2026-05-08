@@ -1106,6 +1106,69 @@ section,
   color: var(--accent-color);
 }
 
+/* FEEDBACK SECTION */
+
+.feedback-form {
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 24px;
+  padding: 35px;
+  margin-top: 30px;
+}
+
+.feedback-form label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+.feedback-form .form-control {
+  border-radius: 14px;
+  padding: 14px 16px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  transition: all 0.3s ease;
+  box-shadow: none;
+}
+
+.feedback-form .form-control:focus {
+  border-color: var(--accent-color);
+}
+
+.feedback-form textarea {
+  resize: none;
+  min-height: 140px;
+}
+
+.feedback-form .form-check-label {
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.feedback-form .form-check-input:checked {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.feedback-btn {
+  background: var(--accent-color);
+  border: none;
+  padding: 12px 28px;
+  border-radius: 14px;
+  color: white;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.feedback-btn:hover {
+  background: var(--contrast-color);
+  color: var(--accent-color);
+}
+
+.feedback-note {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
 /* Swiper */
 
 .swiper-pagination-bullet {

@@ -776,13 +776,11 @@
         <div class="row gy-4 justify-content-center">
 
           <div class="col-lg-7 d-flex flex-column justify-content-center order-2 order-lg-1 align-items-center">
-
-            <div class="content px-xl-5" data-aos="fade-up" data-aos-delay="100">
-              <h3><span>Najčešće Postavljena </span><strong>Pitanja</strong></h3>
-              <p>
-                Informišite se pomoću naših odgovora na najčešće postavljena pitanja. Ako imate dodatnih pitanja i ako mislite da bi olakšali proces dodavanjem Vašeg pitanja na listu, slobodno nas kontaktirajte!
-              </p>
-            </div>
+            
+            <div class="container section-title" data-aos="fade-up" data-aos-delay="100">
+              <h2><span>Najčešće postavljena </span><strong>pitanja</strong></h2>
+              <p>Informišite se pomoću naših odgovora na najčešće postavljena pitanja.</p>
+            </div><!-- End Section Title -->
 
             <div class="faq-container px-xl-5" data-aos="fade-up" data-aos-delay="200">
 
@@ -833,12 +831,89 @@
               
             </div>
 
-          </div>
         </div>
 
       </div>
 
     </section><!-- /Faq Section -->
+
+    <!-- Feedback Section -->
+    <section id="feedback" class="feedback section light-background">
+
+      <div class="container-fluid">
+
+        <div class="row gy-4 justify-content-center">
+
+          <div class="col-lg-7 d-flex flex-column justify-content-center order-2 order-lg-1 align-items-center">
+            
+            <div class="content pt-2 text-center" data-aos="fade-up" data-aos-delay="100">
+
+              <div class="container section-title" data-aos="fade-up">
+                <h2>Povratne informacije</h2>
+                <p>Ukoliko mislite da možete da nam pomognete da unapredimo naše usluge ili ste primetili nepravilnosti na sajtu, slobodno nam se obratite.</p>
+              </div><!-- End Section Title -->
+
+              <form class="feedback-form"
+                    name="feedback"
+                    method="POST"
+                    data-netlify="true"
+                    netlify-honeypot="bot-field">
+
+                <!-- Obavezno za Netlify -->
+                <input type="hidden" name="form-name" value="feedback">
+
+                <div class="form-group mb-3">
+                  <label for="fullName">Vaše ime i prezime</label>
+                  <input type="text" class="form-control" id="fullName"name="fullName" placeholder="Petar Petrović" required>
+                </div>
+
+                <div class="form-group mb-3">
+                  <label for="email">Vaš e-mail</label>
+                  <input type="email" class="form-control" id="email" name="email" placeholder="vašemail@gmail.com" required>
+                </div>
+
+                <p>
+                  Koju vrstu povratne informacije želite da nam pošaljete?
+                </p>
+
+                <div class="mb-3">
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="feedbackType" value="Preporuka" id="recommendation" checked>
+                    <label class="form-check-label" for="recommendation">
+                      Preporuka
+                    </label>
+                  </div>
+
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="feedbackType" value="Nepravilnost" id="issue">
+                    <label class="form-check-label" for="issue">
+                      Nepravilnost na sajtu
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-group mb-4">
+                  <label for="message">Vaša poruka</label>
+                  <textarea class="form-control" id="message" name="message" required></textarea>
+                </div>
+
+                <button type="submit" class="feedback-btn">
+                  Pošalji poruku
+                </button>
+
+                <p class="feedback-note mt-4">
+                  Povoljnije je da nam šaljete preporuke/prijave nefukcionalnosti sajta putem ove forme radi lakše organizacije i praćenja. Hvala Vam na pomoći i izdvojenom vremenu!
+                </p>
+
+              </form>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Feedback Section -->
 
   </main>
 
