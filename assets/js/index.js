@@ -216,4 +216,29 @@
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
+
+  /* Swiper */
+  document.addEventListener("DOMContentLoaded", function () {
+  const swipers = document.querySelectorAll(".js-swiper");
+
+  swipers.forEach((el) => {
+    new Swiper(el, {
+      loop: false,
+      speed: 600,
+      slidesPerView: 1,
+      spaceBetween: 20,
+
+      pagination: {
+        el: el.querySelector(".swiper-pagination"),
+        clickable: true,
+      },
+
+      navigation: {
+        nextEl: el.querySelector(".swiper-button-next"),
+        prevEl: el.querySelector(".swiper-button-prev"),
+      },
+    });
+  });
+});
+
 })();
