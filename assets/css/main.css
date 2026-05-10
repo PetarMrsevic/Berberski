@@ -673,6 +673,61 @@ section,
   text-align: center;
 }
 
+.services .service-toggle {
+  background: none;
+  border: 0.5px solid rgba(0, 0, 0, 0.12);
+  border-radius: 20px;
+  padding: 5px 14px;
+  font-size: 13px;
+  color: var(--accent-color);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 auto;
+  transition: all 0.2s;
+}
+
+.services .service-toggle:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.services .service-toggle .bi-chevron-down {
+  transition: transform 0.25s ease;
+  font-size: 12px;
+}
+
+.services .service-toggle[aria-expanded="true"] .bi-chevron-down {
+  transform: rotate(180deg);
+}
+
+/* Lista usluga */
+.services .service-price-list {
+  list-style: none;
+  padding: 12px 0 0;
+  margin: 14px 0 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.services .service-price-list li {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.services .service-price-list li:last-child {
+  border-bottom: none;
+}
+
+.services .service-price-list li span:last-child {
+  font-weight: 600;
+  white-space: nowrap;
+  margin-left: 10px;
+  color: var(--accent-color);
+}
+
 @media (min-width: 1365px) {
   .services .service-item:hover {
     transform: translateY(-10px);
