@@ -970,8 +970,6 @@ section,
 .workers .worker-item {
   padding: 30px 20px;
   text-align: center;
-  border-style: solid;
-  border-radius: 20px;
   border-color: var(--accent-color);
   position: relative;
   overflow: hidden;
