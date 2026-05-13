@@ -55,7 +55,7 @@ a {
 }
 
 a:hover {
-  color: color-mix(in srgb, var(--accent-color), transparent 25%);
+  color: rgba(75, 93, 75, 0.75);
   text-decoration: none;
 }
 
