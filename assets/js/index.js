@@ -12,33 +12,6 @@
   };
 
   /**
-   * Top Alert
-   * 
-   */
-  window.addEventListener("load", function () {
-
-      const alertBox = document.getElementById("topAlert");
-      const header = document.getElementById("header");
-
-      setTimeout(() => {
-        alertBox.classList.add("show");
-        header.classList.add("move");
-      }, 200);
-
-      setTimeout(() => {
-        alertBox.classList.remove("show");
-        header.classList.remove("move");
-      }, 3200);
-
-      alertBox.addEventListener("transitionend", (e) => {
-      if (!alertBox.classList.contains("show")) {
-        alertBox.style.display = "none";
-        }
-      });
-
-    });
-
-  /**
    * Apply .scrolled class to the body as the page is scrolled down
    */
   function toggleScrolled() {
