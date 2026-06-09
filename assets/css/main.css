@@ -38,6 +38,45 @@
   --contrast-color: #ffffff;
 }
 
+[data-theme="dark"] {
+  --background-color: #1a1f1a;
+  --default-color: #d0d8d0;
+  --heading-color: #eaf0ea;
+  --surface-color: #242924;
+  --contrast-color: #ffffff;
+  --accent-color: #4B5D4B;
+
+  --nav-color: #d0d8d0;
+  --nav-hover-color: #7a9e7a;
+  --nav-mobile-background-color: #1a1f1a;
+  --nav-dropdown-background-color: #242924;
+  --nav-dropdown-color: #d0d8d0;
+  --nav-dropdown-hover-color: #7a9e7a;
+}
+
+[data-theme="dark"] .light-background {
+  --background-color: #1e231e;
+  --surface-color: #282d28;
+}
+
+[data-theme="dark"] .dark-background {
+  --background-color: #111511;
+}
+
+[data-theme="dark"] .feedback-form label {
+  color: var(--default-color);
+}
+
+[data-theme="dark"] .feedback-form .form-control {
+  background-color: #242924;
+  border-color: #3a453a;
+  color: var(--default-color);
+}
+
+[data-theme="dark"] .feedback-form .form-control::placeholder {
+  color: #7a8a7a;
+}
+
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
@@ -1238,3 +1277,23 @@ section,
 /*--------------------------------------------------------------
 # Ovde nastavljam
 --------------------------------------------------------------*/
+
+.theme-toggle {
+  background: none;
+  border: 1px solid color-mix(in srgb, var(--nav-color), transparent 60%);
+  color: var(--nav-color);
+  border-radius: 50px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+.theme-toggle:hover {
+  background: color-mix(in srgb, var(--nav-color), transparent 80%);
+}
