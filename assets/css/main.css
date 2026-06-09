@@ -436,6 +436,9 @@ h6 {
   height: 44px;
   border-radius: 50px;
   transition: all 0.4s;
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--background-color);
 }
 
 .scroll-top i {
