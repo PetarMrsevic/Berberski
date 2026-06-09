@@ -47,11 +47,11 @@
   --accent-color: #698869;
 
   --nav-color: #d0d8d0;
-  --nav-hover-color: #7a9e7a;
+  --nav-hover-color: #698869;
   --nav-mobile-background-color: #1a1f1a;
   --nav-dropdown-background-color: #242924;
   --nav-dropdown-color: #d0d8d0;
-  --nav-dropdown-hover-color: #7a9e7a;
+  --nav-dropdown-hover-color: #698869;
 }
 
 [data-theme="dark"] .light-background {
