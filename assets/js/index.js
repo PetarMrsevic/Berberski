@@ -1,214 +1,172 @@
-(function() {
+(function () {
 
-  /** Going back to the top after refresh */
-  window.addEventListener("load", () => {
+  /** Onemogući browser scroll restoration */
+  history.scrollRestoration = 'manual';
+
+  /** Tema - postavlja se odmah da nema treperenja */
+  const themeToggleInput = document.getElementById('theme-toggle-input');
+  const savedTheme = localStorage.getItem('theme') || 'dark';
+  document.documentElement.setAttribute('data-theme', savedTheme);
+  themeToggleInput.checked = savedTheme === 'light';
+
+  themeToggleInput.addEventListener('change', () => {
+    const next = themeToggleInput.checked ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+  });
+
+  /** Vrati na vrh pri refreshu i ukloni hash iz URL-a */
   if (window.location.hash) {
     history.replaceState(null, null, ' ');
   }
-  });
+  window.scrollTo(0, 0);
 
-  window.onbeforeunload = function () {
-    window.scrollTo(0, 0);
-  };
-
-  /**
-   * Apply .scrolled class to the body as the page is scrolled down
-   */
+  /** Dodaj .scrolled klasu na body pri skrolovanju */
   function toggleScrolled() {
-    const selectBody = document.querySelector('body');
-    const selectHeader = document.querySelector('#header');
-    if (!selectHeader.classList.contains('scroll-up-sticky') && !selectHeader.classList.contains('sticky-top') && !selectHeader.classList.contains('fixed-top')) return;
-    window.scrollY > 100 ? selectBody.classList.add('scrolled') : selectBody.classList.remove('scrolled');
+    const header = document.querySelector('#header');
+    if (
+      !header.classList.contains('scroll-up-sticky') &&
+      !header.classList.contains('sticky-top') &&
+      !header.classList.contains('fixed-top')
+    ) return;
+    document.body.classList.toggle('scrolled', window.scrollY > 100);
   }
 
-  document.addEventListener('scroll', toggleScrolled);
-  window.addEventListener('load', toggleScrolled);
+  /** Scroll top dugme */
+  const scrollTopBtn = document.querySelector('.scroll-top');
 
-  /**
-   * Mobile nav toggle
-   */
+  function toggleScrollTop() {
+    if (scrollTopBtn) {
+      scrollTopBtn.classList.toggle('active', window.scrollY > 100);
+    }
+  }
+
+  scrollTopBtn?.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  /** Navmenu scrollspy */
+  const navmenuLinks = document.querySelectorAll('.navmenu a');
+
+  function navmenuScrollspy() {
+    const position = window.scrollY + 200;
+    navmenuLinks.forEach(link => {
+      if (!link.hash) return;
+      const section = document.querySelector(link.hash);
+      if (!section) return;
+      const inView = position >= section.offsetTop && position <= section.offsetTop + section.offsetHeight;
+      link.classList.toggle('active', inView);
+    });
+  }
+
+  /** Throttled scroll handler za sve scroll funkcije */
+  let ticking = false;
+  document.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        toggleScrolled();
+        toggleScrollTop();
+        navmenuScrollspy();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+
+  window.addEventListener('load', () => {
+    toggleScrolled();
+    toggleScrollTop();
+    navmenuScrollspy();
+  });
+
+  /** Mobile nav toggle */
   const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
 
-  function mobileNavToogle() {
-    document.querySelector('body').classList.toggle('mobile-nav-active');
+  function mobileNavToggle() {
+    document.body.classList.toggle('mobile-nav-active');
     mobileNavToggleBtn.classList.toggle('bi-list');
     mobileNavToggleBtn.classList.toggle('bi-x');
   }
-  if (mobileNavToggleBtn) {
-    mobileNavToggleBtn.addEventListener('click', mobileNavToogle);
-  }
 
-  /**
-   * Hide mobile nav on same-page/hash links
-   */
-  document.querySelectorAll('#navmenu a').forEach(navmenu => {
-    navmenu.addEventListener('click', () => {
-      if (document.querySelector('.mobile-nav-active')) {
-        mobileNavToogle();
+  mobileNavToggleBtn?.addEventListener('click', mobileNavToggle);
+
+  document.querySelectorAll('#navmenu a').forEach(link => {
+    link.addEventListener('click', () => {
+      if (document.body.classList.contains('mobile-nav-active')) {
+        mobileNavToggle();
       }
     });
-
   });
 
-  /**
-   * Preloader
-   */
+  /** Preloader */
   const preloader = document.querySelector('#preloader');
-  if (preloader) {
-    window.addEventListener('load', () => {
-      preloader.remove();
-    });
-  }
+  window.addEventListener('load', () => preloader?.remove());
 
-  /**
-   * Scroll top button
-   */
-  let scrollTop = document.querySelector('.scroll-top');
-
-  function toggleScrollTop() {
-    if (scrollTop) {
-      window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
-    }
-  }
-  scrollTop.addEventListener('click', (e) => {
-    e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  });
-
-  window.addEventListener('load', toggleScrollTop);
-  document.addEventListener('scroll', toggleScrollTop);
-
-  /**
-   * Animation on scroll function and init
-   */
-  function aosInit() {
+  /** AOS animacije */
+  window.addEventListener('load', () => {
     AOS.init({
       duration: 600,
       easing: 'ease-in-out',
       once: true,
       mirror: false
     });
-  }
-  window.addEventListener('load', aosInit);
+  });
 
-  /**
-   * Initiate Pure Counter
-   */
+  /** PureCounter */
   new PureCounter();
 
-  /**
-   * Frequently Asked Questions Toggle
-   */
-  document.querySelectorAll('.faq-item h3, .faq-item .faq-toggle').forEach((faqItem) => {
-    faqItem.addEventListener('click', () => {
-      faqItem.parentNode.classList.toggle('faq-active');
+  /** FAQ toggle */
+  document.querySelectorAll('.faq-item h3, .faq-item .faq-toggle').forEach(item => {
+    item.addEventListener('click', () => {
+      item.parentNode.classList.toggle('faq-active');
     });
   });
 
-  /**
-   * Correct scrolling position upon page load for URLs containing hash links.
-   */
-  window.addEventListener('load', function(e) {
+  /** Scroll na hash pri loadu */
+  window.addEventListener('load', () => {
     if (window.location.hash) {
-      if (document.querySelector(window.location.hash)) {
+      const section = document.querySelector(window.location.hash);
+      if (section) {
         setTimeout(() => {
-          let section = document.querySelector(window.location.hash);
-          let scrollMarginTop = getComputedStyle(section).scrollMarginTop;
-          window.scrollTo({
-            top: section.offsetTop - parseInt(scrollMarginTop),
-            behavior: 'smooth'
-          });
+          const scrollMarginTop = parseInt(getComputedStyle(section).scrollMarginTop);
+          window.scrollTo({ top: section.offsetTop - scrollMarginTop, behavior: 'smooth' });
         }, 100);
       }
     }
   });
 
-  /**
-   * Gallery Change
-   */
-  const buttons = document.querySelectorAll('.gallery-type-button');
+  /** Gallery switcher */
+  const galleryButtons = document.querySelectorAll('.gallery-type-button');
   const galleries = document.querySelectorAll('.mobile-gallery, .mobile-gallery-active');
 
-  buttons.forEach((btn, index) => {
+  galleryButtons.forEach((btn, index) => {
     btn.addEventListener('click', () => {
-
-      // reset dugmad
-      buttons.forEach(b => b.classList.remove('gallery-type-button-active'));
-      
-      // reset galerije
+      galleryButtons.forEach(b => b.classList.remove('gallery-type-button-active'));
       galleries.forEach(g => {
         g.classList.remove('mobile-gallery-active');
         g.classList.add('mobile-gallery');
       });
-
-      // aktiviraj kliknuto dugme
       btn.classList.add('gallery-type-button-active');
-
-      // aktiviraj odgovarajuću galeriju (po indexu)
-      galleries[index].classList.add('mobile-gallery-active');
+      galleries[index]?.classList.replace('mobile-gallery', 'mobile-gallery-active');
     });
   });
 
-  /**
-   * Navmenu Scrollspy
-   */
-  let navmenulinks = document.querySelectorAll('.navmenu a');
-
-  function navmenuScrollspy() {
-    navmenulinks.forEach(navmenulink => {
-      if (!navmenulink.hash) return;
-      let section = document.querySelector(navmenulink.hash);
-      if (!section) return;
-      let position = window.scrollY + 200;
-      if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
-        document.querySelectorAll('.navmenu a.active').forEach(link => link.classList.remove('active'));
-        navmenulink.classList.add('active');
-      } else {
-        navmenulink.classList.remove('active');
-      }
-    })
-  }
-  window.addEventListener('load', navmenuScrollspy);
-  document.addEventListener('scroll', navmenuScrollspy);
-
-
-  /* Swiper */
-  document.addEventListener("DOMContentLoaded", function () {
-  const swipers = document.querySelectorAll(".js-swiper");
-
-  swipers.forEach((el) => {
-    new Swiper(el, {
-      loop: false,
-      speed: 600,
-      slidesPerView: 1,
-      spaceBetween: 20,
-
-      pagination: {
-        el: el.querySelector(".swiper-pagination"),
-        clickable: true,
-      },
-
-      navigation: {
-        nextEl: el.querySelector(".swiper-button-next"),
-        prevEl: el.querySelector(".swiper-button-prev"),
-      },
+  /** Swiper */
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.js-swiper').forEach(el => {
+      new Swiper(el, {
+        loop: false,
+        speed: 600,
+        slidesPerView: 1,
+        spaceBetween: 20,
+        pagination: { el: el.querySelector('.swiper-pagination'), clickable: true },
+        navigation: {
+          nextEl: el.querySelector('.swiper-button-next'),
+          prevEl: el.querySelector('.swiper-button-prev'),
+        },
+      });
     });
   });
-});
-
-const themeToggleInput = document.getElementById('theme-toggle-input');
-
-const savedTheme = localStorage.getItem('theme') || 'dark';
-document.documentElement.setAttribute('data-theme', savedTheme);
-themeToggleInput.checked = savedTheme === 'light';
-
-themeToggleInput.addEventListener('change', () => {
-  const next = themeToggleInput.checked ? 'light' : 'dark';
-  document.documentElement.setAttribute('data-theme', next);
-  localStorage.setItem('theme', next);
-});
 
 })();
