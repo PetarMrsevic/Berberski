@@ -143,6 +143,9 @@
   /** Swiper */
   document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.js-swiper').forEach(el => {
+      const isWorkers = el.closest('.workers');
+      const isPromos = el.closest('.promos');
+
       new Swiper(el, {
         loop: false,
         speed: 600,
@@ -153,6 +156,12 @@
           nextEl: el.querySelector('.swiper-button-next'),
           prevEl: el.querySelector('.swiper-button-prev'),
         },
+        breakpoints: isWorkers ? {
+          992: { slidesPerView: 3, spaceBetween: 30 }
+        } : isPromos ? {
+          768: { slidesPerView: 2 },
+          992: { slidesPerView: 4, spaceBetween: 0 }
+        } : {}
       });
     });
   });
