@@ -817,9 +817,9 @@ section,
 .practices .practice-image img {
   inset: 0;
   display: block;
-  width: clamp(350px, 75%, 600px);
+  width: clamp(350px, 75%, 400px);
   height: clamp(350px, 75%, 600px);
-  object-fit: contain;
+  object-fit: cover;
   z-index: 1;
   border-radius: 30px;
 }
