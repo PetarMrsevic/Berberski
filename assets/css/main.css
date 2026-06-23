@@ -91,7 +91,7 @@ h6 {
 
 .header .cta-btn,
 .header .cta-btn:focus {
-  color: var(--contrast-color);
+  color: var(--default-color);
   background: var(--accent-color);
   font-size: clamp(13px, 1vw, 15px);
   padding: 8px 26px;
@@ -102,7 +102,6 @@ h6 {
 
 .header .cta-btn:hover,
 .header .cta-btn:focus:hover {
-  color: var(--contrast-color);
   background: color-mix(in srgb, var(--accent-color), transparent 15%);
 }
 
