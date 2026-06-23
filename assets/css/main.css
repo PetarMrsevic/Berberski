@@ -91,7 +91,7 @@ h6 {
 
 .header .cta-btn,
 .header .cta-btn:focus {
-  color: var(--default-color);
+  color:hsl(from var(--default-color) h s l);
   background: var(--accent-color);
   font-size: clamp(13px, 1vw, 15px);
   padding: 8px 26px;
