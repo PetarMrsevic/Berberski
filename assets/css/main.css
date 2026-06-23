@@ -4,41 +4,6 @@
   --heading-font: system-ui, sans-serif;
   --nav-font: system-ui, sans-serif;
 
-  /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #000000; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #4B5D4B; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
-
-  /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
-  --nav-color: #ffffff;  /* The default color of the main navmenu links */
-  --nav-hover-color: #4B5D4B; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #444444; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #4B5D4B; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
-
-  scroll-behavior: smooth;
-}
-
-/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
-
-.light-background {
-  --background-color: #f9f9f9;
-  --surface-color: #ffffff;
-}
-
-.dark-background {
-  --background-color: #4B5D4B;
-  --default-color: #ffffff;
-  --heading-color: #ffffff;
-  --surface-color: #252525;
-  --contrast-color: #ffffff;
-}
-
-[data-theme="dark"] {
   --background-color: #1a1f1a;
   --default-color: #d0d8d0;
   --heading-color: #eaf0ea;
@@ -52,29 +17,15 @@
   --nav-dropdown-background-color: #242924;
   --nav-dropdown-color: #d0d8d0;
   --nav-dropdown-hover-color: #698869;
+
+  scroll-behavior: smooth;
 }
 
-[data-theme="dark"] .light-background {
-  --background-color: #1e231e;
-  --surface-color: #282d28;
-}
-
-[data-theme="dark"] .dark-background {
-  --background-color: #111511;
-}
-
-[data-theme="dark"] .feedback-form label {
-  color: var(--default-color);
-}
-
-[data-theme="dark"] .feedback-form .form-control {
-  background-color: #242924;
-  border-color: #3a453a;
-  color: var(--default-color);
-}
-
-[data-theme="dark"] .feedback-form .form-control::placeholder {
-  color: #7a8a7a;
+.darker-background {
+  --background-color: #121512;
+  --default-color: #c0c8c0;
+  --contrast-color: #ffffff;
+  --accent-color: #536b53;
 }
 
 /*--------------------------------------------------------------
@@ -529,7 +480,7 @@ section,
 # Global Section Titles
 --------------------------------------------------------------*/
 .section-title {
-  padding-bottom: 50px;
+  padding-bottom: 30px;
   position: relative;
 }
 
@@ -799,20 +750,20 @@ section,
 # Collabs Section
 --------------------------------------------------------------*/
 
-.collabs .collab-image {
-  position: relative;
-  min-height: 400px;
-}
-
 .collabs .collab-image img {
-  position: absolute;
   inset: 0;
+  width: clamp(40px, 100%, 600px);
+  height: clamp(40px, 100%, 600px);
   display: block;
-  width: 100%;
-  height: 100%;
   object-fit: cover;
   z-index: 1;
-  border-radius: 50px;
+  border-radius: 30px;
+}
+
+.collabs .collab-item {
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 24px;
+  padding: 35px;
 }
 
 .collabs .collab-item h4 {
@@ -838,6 +789,12 @@ section,
 # Practices Section
 --------------------------------------------------------------*/
 
+.practices .practice-item {
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 24px;
+  padding: 35px;
+}
+
 .practices .practice-item h4 {
   font-size: clamp(18px, 1.5vw, 24px);
   font-weight: 700;
@@ -852,29 +809,30 @@ section,
 }
 
 .practices .practice-item p {
-  font-size: clamp(15px, 1vw, 17px);
+  font-size: clamp(13px, 1vw, 15px);
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   margin: 0;
 }
 
-.practices .practice-image {
-  position: relative;
-  min-height: 400px;
-}
-
 .practices .practice-image img {
-  position: absolute;
   inset: 0;
   display: block;
-  width: 100%;
-  height: 100%;
+  width: clamp(40px, 100%, 600px);
+  height: clamp(40px, 100%, 600px);
   object-fit: contain;
   z-index: 1;
+  border-radius: 30px;
 }
 
 /*--------------------------------------------------------------
 # Promos Section
 --------------------------------------------------------------*/
+
+.promos .promo-item {
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 24px;
+  padding: 35px;
+}
 
 .promos .promo-item h4 {
   font-size: clamp(18px, 1.5vw, 24px);
@@ -1168,9 +1126,11 @@ section,
   border-radius: 14px;
   padding: 14px 16px;
   border: 1px solid #ddd;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.05);
   transition: all 0.3s ease;
   box-shadow: none;
+  color: var(--contrast-color);
+  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
 }
 
 .feedback-form .form-control:focus {
@@ -1243,52 +1203,3 @@ section,
 /*--------------------------------------------------------------
 # Ovde nastavljam
 --------------------------------------------------------------*/
-
-.theme-switch {
-  cursor: pointer;
-  margin-right: 10px;
-  display: flex;
-  align-items: center;
-}
-
-.theme-switch input {
-  display: none;
-}
-
-.theme-switch-track {
-  position: relative;
-  width: 64px;
-  height: 32px;
-  background: color-mix(in srgb, var(--nav-color), transparent 75%);
-  border: 1px solid color-mix(in srgb, var(--nav-color), transparent 50%);
-  border-radius: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 7px;
-  transition: background 0.3s;
-}
-
-.theme-switch-sun,
-.theme-switch-moon {
-  font-size: 13px;
-  color: var(--nav-color);
-  line-height: 1;
-  z-index: 1;
-  transition: opacity 0.3s;
-}
-
-.theme-switch-thumb {
-  position: absolute;
-  top: 3px;
-  left: 3px;
-  width: 24px;
-  height: 24px;
-  background: var(--nav-color);
-  border-radius: 50%;
-  transition: transform 0.3s ease;
-}
-
-.theme-switch input:checked ~ .theme-switch-track .theme-switch-thumb {
-  transform: translateX(32px);
-}

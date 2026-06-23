@@ -3,18 +3,6 @@
   /** Onemogući browser scroll restoration */
   history.scrollRestoration = 'manual';
 
-  /** Tema - postavlja se odmah da nema treperenja */
-  const themeToggleInput = document.getElementById('theme-toggle-input');
-  const savedTheme = localStorage.getItem('theme') || 'dark';
-  document.documentElement.setAttribute('data-theme', savedTheme);
-  themeToggleInput.checked = savedTheme === 'light';
-
-  themeToggleInput.addEventListener('change', () => {
-    const next = themeToggleInput.checked ? 'light' : 'dark';
-    document.documentElement.setAttribute('data-theme', next);
-    localStorage.setItem('theme', next);
-  });
-
   /** Vrati na vrh pri refreshu i ukloni hash iz URL-a */
   if (window.location.hash) {
     history.replaceState(null, null, ' ');
