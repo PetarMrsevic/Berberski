@@ -763,7 +763,6 @@ section,
 .collabs .collab-item {
   border: 1px solid rgba(255,255,255,0.08);
   border-radius: 24px;
-  padding: 35px;
   background-color: var(--surface-color);
 }
 
@@ -781,7 +780,7 @@ section,
 }
 
 .collabs .collab-item p {
-  font-size: clamp(13px, 1vw, 15px);
+  font-size: clamp(12px, 1vw, 15px);
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   margin: 0;
 }
@@ -793,7 +792,6 @@ section,
 .practices .practice-item {
   border: 1px solid rgba(255,255,255,0.08);
   border-radius: 24px;
-  padding: 35px;
   background-color: var(--surface-color);
 }
 
@@ -811,7 +809,7 @@ section,
 }
 
 .practices .practice-item p {
-  font-size: clamp(13px, 1vw, 15px);
+  font-size: clamp(12px, 1vw, 15px);
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   margin: 0;
 }
@@ -833,7 +831,6 @@ section,
 .promos .promo-item {
   border: 1px solid rgba(255,255,255,0.08);
   border-radius: 24px;
-  padding: 35px;
   background-color: var(--surface-color);
 }
 
@@ -851,7 +848,7 @@ section,
 }
 
 .promos .promo-item p {
-  font-size: clamp(13px, 1vw, 15px);
+  font-size: clamp(12px, 1vw, 15px);
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   margin: 0;
 }
