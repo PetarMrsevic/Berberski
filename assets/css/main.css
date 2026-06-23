@@ -91,13 +91,14 @@ h6 {
 
 .header .cta-btn,
 .header .cta-btn:focus {
-  color:hsl(from var(--default-color) h s l);
+  color: var(--default-color);
   background: var(--accent-color);
   font-size: clamp(13px, 1vw, 15px);
   padding: 8px 26px;
   margin: 0;
   border-radius: 50px;
   transition: 0.3s;
+  font-weight: 500;
 }
 
 .header .cta-btn:hover,
