@@ -752,8 +752,8 @@ section,
 
 .collabs .collab-image img {
   inset: 0;
-  width: clamp(40px, 80%, 600px);
-  height: clamp(40px, 80%, 600px);
+  width: clamp(350px, 75%, 600px);
+  height: clamp(350px, 75%, 600px);
   display: block;
   object-fit: cover;
   z-index: 1;
@@ -817,8 +817,8 @@ section,
 .practices .practice-image img {
   inset: 0;
   display: block;
-  width: clamp(40px, 80%, 600px);
-  height: clamp(40px, 80%, 600px);
+  width: clamp(350px, 75%, 600px);
+  height: clamp(350px, 75%, 600px);
   object-fit: contain;
   z-index: 1;
   border-radius: 30px;
