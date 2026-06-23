@@ -763,6 +763,7 @@ section,
   border: 1px solid rgba(255,255,255,0.08);
   border-radius: 24px;
   padding: 35px;
+  background-color: var(--surface-color);
 }
 
 .collabs .collab-item h4 {
@@ -792,6 +793,7 @@ section,
   border: 1px solid rgba(255,255,255,0.08);
   border-radius: 24px;
   padding: 35px;
+  background-color: var(--surface-color);
 }
 
 .practices .practice-item h4 {
@@ -831,6 +833,7 @@ section,
   border: 1px solid rgba(255,255,255,0.08);
   border-radius: 24px;
   padding: 35px;
+  background-color: var(--surface-color);
 }
 
 .promos .promo-item h4 {
