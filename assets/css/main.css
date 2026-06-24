@@ -65,6 +65,11 @@ h6 {
   box-sizing: border-box;
 }
 
+iframe {
+  width: min(85vw, 400px);
+  height: min(127.5vw, 600px);
+}
+
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
@@ -751,10 +756,9 @@ section,
 --------------------------------------------------------------*/
 
 .collabs .collab-image img {
-  inset: 0;
-  width: clamp(350px, 75%, 600px);
-  height: clamp(350px, 75%, 600px);
   display: block;
+  width: min(85vw, 500px);
+  height: min(85vw, 500px);
   object-fit: cover;
   z-index: 1;
   border-radius: 30px;
@@ -783,15 +787,6 @@ section,
   font-size: clamp(12px, 1vw, 15px);
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   margin: 0;
-}
-
-@media (max-width: 991px) {
-  .collabs .collab-image img {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 3 / 4;
-    max-height: 450px;
-  }
 }
 
 /*--------------------------------------------------------------
@@ -824,23 +819,13 @@ section,
 }
 
 .practices .practice-image img {
-  inset: 0;
   display: block;
-  width: clamp(350px, 75%, 600px);
-  height: clamp(350px, 75%, 600px);
+  width: min(85vw, 500px);
+  height: min(85vw, 500px);
   object-fit: cover;
   z-index: 1;
   border-radius: 30px;
   object-position: bottom;
-}
-
-@media (max-width: 991px) {
-  .practices .practice-image img {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 3 / 4;
-    max-height: 550px;
-  }
 }
 
 /*--------------------------------------------------------------

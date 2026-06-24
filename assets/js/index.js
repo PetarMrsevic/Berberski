@@ -142,28 +142,34 @@
 
   /** Swiper */
   document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.js-swiper').forEach(el => {
-      const isWorkers = el.closest('.workers');
-      const isPromos = el.closest('.promos');
+  document.querySelectorAll('.js-swiper').forEach(el => {
+    const isWorkers = el.closest('.workers');
+    const isPromos = el.closest('.promos-wrap');
 
-      new Swiper(el, {
-        loop: false,
-        speed: 600,
-        slidesPerView: 1,
-        spaceBetween: 20,
-        pagination: { el: el.querySelector('.swiper-pagination'), clickable: true },
-        navigation: {
-          nextEl: el.querySelector('.swiper-button-next'),
-          prevEl: el.querySelector('.swiper-button-prev'),
-        },
-        breakpoints: isWorkers ? {
-          992: { slidesPerView: 3, spaceBetween: 30 }
-        } : isPromos ? {
-          768: { slidesPerView: 2 },
-          992: { slidesPerView: 4, spaceBetween: 0 }
-        } : {}
-      });
+    new Swiper(el, {
+      loop: isPromos ? true : false,
+      speed: 1000,
+      slidesPerView: 1,
+      spaceBetween: 20,
+      autoplay: isPromos ? {
+        delay: 5000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+        freeMode: true
+      } : false,
+      pagination: { el: el.querySelector('.swiper-pagination'), clickable: true },
+      navigation: {
+        nextEl: el.querySelector('.swiper-button-next'),
+        prevEl: el.querySelector('.swiper-button-prev'),
+      },
+      breakpoints: isWorkers ? {
+        992: { slidesPerView: 3, spaceBetween: 30 }
+      } : isPromos ? {
+        768: { slidesPerView: 2 },
+        992: { slidesPerView: 4, spaceBetween: 0 }
+      } : {}
     });
   });
+});
 
 })();
