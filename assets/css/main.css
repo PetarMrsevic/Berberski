@@ -785,6 +785,15 @@ section,
   margin: 0;
 }
 
+@media (max-width: 991px) {
+  .collabs .collab-image img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 4;
+    max-height: 450px;
+  }
+}
+
 /*--------------------------------------------------------------
 # Practices Section
 --------------------------------------------------------------*/
@@ -823,6 +832,15 @@ section,
   z-index: 1;
   border-radius: 30px;
   object-position: bottom;
+}
+
+@media (max-width: 991px) {
+  .practices .practice-image img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 4;
+    max-height: 550px;
+  }
 }
 
 /*--------------------------------------------------------------
