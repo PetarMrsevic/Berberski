@@ -726,7 +726,7 @@ section,
 .gallery-type-button {
   background: var(--accent-color);
   border: none;
-  border-radius: 50px;
+  border-radius: 50%;
   transition: 0.3s;
   margin: 10px 10px;
   opacity: 0.5;
