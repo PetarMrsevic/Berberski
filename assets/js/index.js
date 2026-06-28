@@ -148,17 +148,16 @@
 
     new Swiper(el, {
       loop: isPromos ? true : false,
-      speed: 1000,
+      speed: isPromos ? 2000 : 1000,        // smooth konstantna brzina
       slidesPerView: 1,
       spaceBetween: 20,
+      allowTouchMove: isPromos ? false : true,
       autoplay: isPromos ? {
-        delay: 5000,
+        delay: 0,                           // bez pauze
         disableOnInteraction: false,
-        pauseOnMouseEnter: true,
-        freeMode: true
       } : false,
-      pagination: { el: el.querySelector('.swiper-pagination'), clickable: true },
-      navigation: {
+      pagination: isPromos ? false : { el: el.querySelector('.swiper-pagination'), clickable: true },
+      navigation: isPromos ? false : {
         nextEl: el.querySelector('.swiper-button-next'),
         prevEl: el.querySelector('.swiper-button-prev'),
       },
@@ -169,7 +168,9 @@
         992: { slidesPerView: 4, spaceBetween: 0 }
       } : {}
     });
+
   });
+
 });
 
 })();
