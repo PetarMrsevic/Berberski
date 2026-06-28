@@ -65,7 +65,7 @@ h6 {
   box-sizing: border-box;
 }
 
-iframe {
+video {
   width: min(85vw, 400px);
   height: min(127.5vw, 600px);
 }
