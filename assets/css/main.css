@@ -783,7 +783,10 @@ section,
 --------------------------------------------------------------*/
 
 .gallery-type {
-  max-width: 100%;
+  background-color: var(--surface-color);
+  border-radius: 50px;
+  box-shadow: 0px 5px 50px 0px rgba(0, 0, 0, 0.1);
+  width: fit-content;
 }
 
 .gallery-type-button {
@@ -791,14 +794,20 @@ section,
   border: none;
   border-radius: 50%;
   transition: 0.3s;
-  margin: 10px 10px;
+  margin: clamp(15px, 1vw, 20px);
   opacity: 0.5;
+  width: clamp(10px, 12vw, 60px);
+  height: clamp(10px, 12vw, 60px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .gallery-type img {
-  width: clamp(30px, 20vw, 60px);
-  height: clamp(30px, 20vw, 60px);
+  width: clamp(30px, 8vw, 40px);
+  height: clamp(30px, 8vw, 40px);
   display: block;
+  object-fit: cover;
 }
 
 .gallery-type-button-active {
