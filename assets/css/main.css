@@ -570,10 +570,10 @@ section,
 }
 
 .hero .scroll-down-arrow {
-  font-size: clamp(16px, 1vw, 20px);
+  font-size: clamp(30px, 1vw, 40px);
   color: var(--contrast-color);
-  height: auto;
-  width: 10px;
+  height: clamp(16px, 1vw, 20px);
+  width: clamp(16px, 1vw, 20px);
 }
 
 .scroll-down-arrow:nth-child(1) { animation: bounce-fade 1.6s ease-in-out infinite 0s; }
