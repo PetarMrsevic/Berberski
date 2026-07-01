@@ -1305,5 +1305,38 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Ovde nastavljam
+# Swiper Chevron Navigation
 --------------------------------------------------------------*/
+.chevron-nav {
+  margin-top: 15px;
+}
+
+.chevron-nav .chevron-group i {
+  font-size: clamp(22px, 2vw, 28px);
+  color: var(--accent-color);
+  line-height: 0;
+}
+
+.chevron-nav .chevron-group-left i:nth-child(1) { animation: chevron-bounce-left 1.6s ease-in-out infinite 0s; }
+.chevron-nav .chevron-group-left i:nth-child(2) { animation: chevron-bounce-left 1.6s ease-in-out infinite 0.2s; }
+.chevron-nav .chevron-group-left i:nth-child(3) { animation: chevron-bounce-left 1.6s ease-in-out infinite 0.4s; }
+
+.chevron-nav .chevron-group-right i:nth-child(1) { animation: chevron-bounce-right 1.6s ease-in-out infinite 0s; }
+.chevron-nav .chevron-group-right i:nth-child(2) { animation: chevron-bounce-right 1.6s ease-in-out infinite 0.2s; }
+.chevron-nav .chevron-group-right i:nth-child(3) { animation: chevron-bounce-right 1.6s ease-in-out infinite 0.4s; }
+
+@keyframes chevron-bounce-left {
+  0%, 100% { opacity: 0.2; transform: translateX(0); }
+  50%      { opacity: 1;   transform: translateX(-6px); }
+}
+
+@keyframes chevron-bounce-right {
+  0%, 100% { opacity: 0.2; transform: translateX(0); }
+  50%      { opacity: 1;   transform: translateX(6px); }
+}
+
+.chevron-nav .chevron-group.is-disabled i {
+  animation: none !important;
+  opacity: 0.15 !important;
+  transform: none !important;
+}
