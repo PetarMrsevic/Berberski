@@ -7,4 +7,22 @@
     <changefreq>weekly</changefreq>
   </url>
 
+  <url>
+    <loc>https://berberski.rs/assets/docs/berberski-saradnje.pdf</loc>
+    <priority>0.5</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://berberski.rs/assets/docs/berberski-frizerska-obuka.pdf</loc>
+    <priority>0.5</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://berberski.rs/assets/docs/berberski-uputstvo-za-reklamiranje.pdf</loc>
+    <priority>0.5</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
 </urlset>
